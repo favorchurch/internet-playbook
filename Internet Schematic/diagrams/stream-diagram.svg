@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 720" width="1120" height="720">
+  <defs>
+    <marker id="arr"    markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#555"/></marker>
+    <marker id="arr-p"  markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#8E44AD"/></marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; }
+      .h1    { font-size: 26px; font-weight: bold; fill: #111; }
+      .lbl   { font-size: 14px; fill: #222; text-anchor: middle; font-weight: bold; }
+      .lbl-w { font-size: 14px; fill: #fff; text-anchor: middle; font-weight: bold; }
+      .sub   { font-size: 11px; fill: #555; text-anchor: middle; }
+      .badge { font-size: 10px; font-weight: bold; text-anchor: middle; }
+      .trg   { font-size: 12px; fill: #B45309; font-weight: bold; }
+      .trg-b { font-size: 12px; fill: #1565C0; font-weight: bold; }
+      .strm  { font-size: 12px; fill: #333; font-style: italic; }
+      .ann   { font-size: 13px; fill: #555; font-style: italic; font-weight: bold; }
+      .src   { font-size: 11px; fill: #555; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1120" height="720" fill="#fff"/>
+
+  <!-- Title -->
+  <text x="30" y="42" class="h1">Stream Diagram</text>
+
+  <!-- Socials annotation top-right -->
+  <line x1="990" y1="58" x2="1062" y2="58" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="1073" y="63" class="ann">Socials</text>
+
+  <!-- Production / Worship source label -->
+  <text x="111" y="138" class="src">Production</text>
+  <text x="111" y="153" class="src">Worship</text>
+  <line x1="111" y1="157" x2="111" y2="177" stroke="#999" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ══════════════════════════════════════
+       BROADCAST SWITCHER
+  ══════════════════════════════════════ -->
+  <rect x="30" y="177" width="164" height="142" rx="14" fill="#e8e8e8" stroke="#999" stroke-width="2"/>
+  <text x="112" y="235" class="lbl">Broadcast</text>
+  <text x="112" y="254" class="lbl">Switcher</text>
+
+  <!-- ══════════════════════════════════════
+       RESI  (upper lane)
+  ══════════════════════════════════════ -->
+  <!-- studio.resi.io label above RESI -->
+  <text x="422" y="92" class="sub">studio.resi.io</text>
+
+  <!-- Switcher → RESI -->
+  <line x1="194" y1="218" x2="316" y2="172" stroke="#555" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- RESI box -->
+  <rect x="316" y="100" width="212" height="118" rx="14" fill="#c8e6c9" stroke="#81c784" stroke-width="2"/>
+  <text x="422" y="125" class="lbl">Resi Encoder</text>
+  <text x="422" y="142" class="sub">DHCP via FVR MAIN · studio.resi.io</text>
+  <text x="422" y="156" class="sub">via FVR RESI (PLDT)</text>
+  <text x="422" y="174" style="font-size:12px;fill:#444;text-anchor:middle;font-style:italic;">2–5 min buffer</text>
+
+  <!-- RESI → dest 1 (YT-Prod TEST) -->
+  <line x1="528" y1="135" x2="642" y2="102" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- RESI → dest 2 (Favor Production) -->
+  <line x1="528" y1="158" x2="642" y2="183" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- RESI → dest 3 (Facebook, dashed — OFF) -->
+  <line x1="528" y1="184" x2="642" y2="268" stroke="#bbb" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arr)"/>
+
+  <!-- Dest 1: YT-Prod (TEST) black box -->
+  <rect x="642" y="70" width="178" height="56" rx="8" fill="#111" stroke="#333" stroke-width="2"/>
+  <text x="731" y="95"  class="lbl-w">YT-Prod</text>
+  <text x="731" y="113" style="font-size:10px;fill:#aaa;text-anchor:middle;">(Favor Production)</text>
+  <!-- TEST badge -->
+  <rect x="768" y="60" width="52" height="21" rx="4" fill="#FDD835" stroke="#F9A825" stroke-width="1"/>
+  <text x="794" y="75" class="badge" style="fill:#333;">TEST</text>
+  <!-- Timing -->
+  <text x="832" y="89"  class="trg-b">Trigger: 7:07am (auto)</text>
+  <text x="832" y="106" class="strm">Delay: 1hr</text>
+
+  <!-- Dest 2: Favor Production / Youtube (UNLISTED — was PUBLIC) -->
+  <rect x="642" y="156" width="178" height="56" rx="8" fill="#e53935" stroke="#c62828" stroke-width="2"/>
+  <text x="731" y="180" class="lbl-w">Youtube</text>
+  <text x="731" y="198" style="font-size:10px;fill:#fff;text-anchor:middle;">Favor Production</text>
+  <!-- UNLISTED badge (replaces PUBLIC from original) -->
+  <rect x="749" y="146" width="72" height="21" rx="4" fill="#616161" stroke="#424242" stroke-width="1"/>
+  <text x="785" y="161" class="badge" style="fill:#fff;">UNLISTED</text>
+  <!-- Timing -->
+  <text x="832" y="174" class="trg">Trigger: 9:48am (auto)</text>
+  <text x="832" y="191" class="strm">Delay: 2–5 mins</text>
+
+  <!-- Dest 3: Facebook (OFF on Sundays — was PUBLIC) grayed out -->
+  <rect x="642" y="242" width="178" height="56" rx="8" fill="#90A4AE" stroke="#78909C" stroke-width="2"/>
+  <text x="731" y="266" class="lbl-w" style="fill:#111;">Facebook</text>
+  <text x="731" y="284" style="font-size:10px;fill:#222;text-anchor:middle;">OFF — Sundays</text>
+  <!-- OFF badge (was PUBLIC) -->
+  <rect x="756" y="232" width="48" height="21" rx="4" fill="#607D8B" stroke="#546E7A" stroke-width="1"/>
+  <text x="780" y="247" class="badge" style="fill:#fff;">OFF</text>
+  <!-- Timing (muted) -->
+  <text x="832" y="260" class="trg" style="fill:#666;">Trigger: 9:48am (auto)</text>
+  <text x="832" y="277" class="strm" style="fill:#666;">Delay: 2–5 mins</text>
+
+  <!-- ══════════════════════════════════════
+       AJA HELO  (lower lane)
+  ══════════════════════════════════════ -->
+  <!-- Switcher → AJA (with 9:45am trigger label) -->
+  <line x1="194" y1="286" x2="316" y2="396" stroke="#555" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="228" y="348" class="trg" style="text-anchor:middle;">7:00 AM</text>
+  <text x="228" y="364" class="trg" style="text-anchor:middle;">ON</text>
+
+  <!-- AJA-Helo box -->
+  <rect x="316" y="368" width="172" height="90" rx="14" fill="#e8e8e8" stroke="#999" stroke-width="2"/>
+  <text x="402" y="391" class="lbl">AJA Helo</text>
+  <text x="402" y="407" class="sub">10.6.33.5 · via FVR MAIN</text>
+  <text x="402" y="421" class="sub">app.restream.io</text>
+  <text x="402" y="437" style="font-size:11px;fill:#555;text-anchor:middle;font-style:italic;">Realtime (&lt;30s)</text>
+
+  <!-- AJA → Restream -->
+  <line x1="488" y1="403" x2="534" y2="403" stroke="#555" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- app.restream.io label below Restream -->
+  <text x="632" y="458" class="sub">app.restream.io</text>
+
+  <!-- Restream box -->
+  <rect x="534" y="368" width="196" height="70" rx="14" fill="#f5f5f5" stroke="#bbb" stroke-width="2"/>
+  <text x="632" y="399" class="lbl">Restream</text>
+  <text x="632" y="419" style="font-size:12px;fill:#555;text-anchor:middle;font-style:italic;">realtime &lt;30s</text>
+
+  <!-- Restream → dest 4 (YT-Backup) -->
+  <line x1="730" y1="388" x2="800" y2="362" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- Restream → dest 5 (YT-Prod REHEARSALS) -->
+  <line x1="730" y1="403" x2="800" y2="444" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- Restream → dest 6 (iWantTV) -->
+  <line x1="730" y1="422" x2="800" y2="528" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Dest 4: YT-Backup / Favor Church Manila (UNLISTED) -->
+  <rect x="800" y="334" width="178" height="56" rx="8" fill="#e53935" stroke="#c62828" stroke-width="2"/>
+  <text x="889" y="358" class="lbl-w">YT-Backup</text>
+  <text x="889" y="376" style="font-size:10px;fill:#fff;text-anchor:middle;">Favor Church Manila</text>
+  <!-- UNLISTED badge -->
+  <rect x="814" y="324" width="72" height="21" rx="4" fill="#616161" stroke="#424242" stroke-width="1"/>
+  <text x="850" y="339" class="badge" style="fill:#fff;">UNLISTED</text>
+  <!-- Timing -->
+  <text x="990" y="352" class="trg">Trigger: 9:45am</text>
+  <text x="990" y="369" class="strm">Delay: 30s</text>
+
+  <!-- Dest 5: YT-Prod via Restream (REHEARSALS) -->
+  <rect x="800" y="418" width="178" height="56" rx="8" fill="#111" stroke="#333" stroke-width="2"/>
+  <text x="889" y="443" class="lbl-w">YT-Prod</text>
+  <text x="889" y="461" style="font-size:10px;fill:#aaa;text-anchor:middle;">(Favor Production)</text>
+  <!-- REHEARSALS badge -->
+  <rect x="803" y="408" width="88" height="21" rx="4" fill="#827717" stroke="#558B2F" stroke-width="1"/>
+  <text x="847" y="423" class="badge" style="fill:#fff;">REHEARSALS</text>
+  <!-- Timing -->
+  <text x="990" y="432" class="trg-b">Trigger: 7:30am</text>
+  <text x="990" y="447" class="strm">Link → GC (Worship)</text>
+  <text x="990" y="462" class="trg">9:45am (live)</text>
+  <text x="990" y="477" class="strm">Delay: realtime</text>
+
+  <!-- Dest 6: iWantTV (PUBLIC) -->
+  <rect x="800" y="502" width="178" height="56" rx="8" fill="#1565c0" stroke="#0d47a1" stroke-width="2"/>
+  <text x="889" y="534" class="lbl-w">iWantTV</text>
+  <!-- PUBLIC badge -->
+  <rect x="820" y="492" width="58" height="21" rx="4" fill="#388e3c" stroke="#2e7d32" stroke-width="1"/>
+  <text x="849" y="507" class="badge" style="fill:#fff;">PUBLIC</text>
+  <!-- Timing -->
+  <text x="990" y="520" class="trg">Trigger: 9:20am</text>
+  <text x="990" y="537" class="strm">Delay: 4s</text>
+
+  <!-- ══════════════════════════════════════
+       SPF.IO  (AI Translations — bottom)
+  ══════════════════════════════════════ -->
+  <line x1="30" y1="590" x2="1090" y2="590" stroke="#ddd" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <rect x="30" y="607" width="152" height="56" rx="10" fill="#5D6D7E" stroke="#2C3E50" stroke-width="2"/>
+  <text x="106" y="631" class="lbl-w" style="font-size:13px;">Audio Board</text>
+  <text x="106" y="649" style="font-size:10px;fill:#fff;text-anchor:middle;">MC2 · M-Audio</text>
+
+  <line x1="182" y1="635" x2="228" y2="635" stroke="#8E44AD" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arr-p)"/>
+
+  <rect x="228" y="607" width="192" height="56" rx="10" fill="#8E44AD" stroke="#6C3483" stroke-width="2"/>
+  <text x="324" y="631" class="lbl-w" style="font-size:13px;">SPF.IO</text>
+  <text x="324" y="649" style="font-size:10px;fill:#fff;text-anchor:middle;">AI Live Translations</text>
+
+  <text x="434" y="622" class="trg" style="fill:#8E44AD;">~10:30 AM ON</text>
+  <text x="580" y="622" style="font-size:11px;fill:#555;font-style:italic;">Captain signal → AI Operator manually triggers at MC2</text>
+  <text x="434" y="640" class="trg" style="fill:#8E44AD;">~11:30 AM OFF</text>
+  <text x="580" y="640" style="font-size:11px;fill:#555;font-style:italic;">Before ministry time</text>
+  <text x="434" y="657" style="font-size:10px;fill:#555;">Hardware: M-Audio USB interface + printer cable · Login: tech@favor.church</text>
+
+  <!-- ══════════════════════════════════════
+       LEGEND
+  ══════════════════════════════════════ -->
+  <rect x="30" y="680" width="1060" height="28" rx="4" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <rect x="40"  y="688" width="12" height="12" rx="2" fill="#c8e6c9" stroke="#81c784" stroke-width="1"/>
+  <text x="56"  y="699" style="font-size:10px;fill:#444;">Resi (2–5 min buffer)</text>
+  <rect x="200" y="688" width="12" height="12" rx="2" fill="#e8e8e8" stroke="#999" stroke-width="1"/>
+  <text x="216" y="699" style="font-size:10px;fill:#444;">AJA → Restream (realtime)</text>
+  <rect x="400" y="688" width="12" height="12" rx="2" fill="#e53935" stroke="#c62828" stroke-width="1"/>
+  <text x="416" y="699" style="font-size:10px;fill:#444;">YouTube (live)</text>
+  <rect x="506" y="688" width="12" height="12" rx="2" fill="#1565c0" stroke="#0d47a1" stroke-width="1"/>
+  <text x="522" y="699" style="font-size:10px;fill:#444;">iWantTV (public)</text>
+  <rect x="628" y="688" width="12" height="12" rx="2" fill="#90A4AE" stroke="#78909C" stroke-width="1"/>
+  <text x="644" y="699" style="font-size:10px;fill:#444;">Facebook — OFF Sundays</text>
+  <rect x="802" y="688" width="12" height="12" rx="2" fill="#8E44AD" stroke="#6C3483" stroke-width="1"/>
+  <text x="818" y="699" style="font-size:10px;fill:#444;">AI Translations (manual)</text>
+
+</svg>

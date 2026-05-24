@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#444"/>
+    </marker>
+    <marker id="arr-teal" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#20B2AA"/>
+    </marker>
+    <marker id="arr-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#C0392B"/>
+    </marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; }
+      .title { font-size: 17px; font-weight: bold; fill: #222; text-anchor: middle; }
+      .lbl  { font-size: 12px; fill: #222; text-anchor: middle; }
+      .sub  { font-size: 10px; fill: #555; text-anchor: middle; }
+      .edge { font-size: 9px;  fill: #666; }
+      .section { font-size: 10px; font-weight: bold; fill: #555; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="480" fill="#f8f8f8"/>
+
+  <!-- Title -->
+  <text x="450" y="26" class="title">Metrotent — Network Topology (v2026-01-16)</text>
+
+  <!-- ═══════════════════════════════════════════════════
+       WAN SOURCES  (col 1, x=20)
+  ═══════════════════════════════════════════════════ -->
+
+  <!-- Starlink -->
+  <rect x="20" y="52" width="115" height="50" rx="5" fill="#87CEEB" stroke="#2980B9" stroke-width="2"/>
+  <text x="77" y="73" class="lbl">Starlink</text>
+  <text x="77" y="89" class="sub">WAN 1</text>
+
+  <!-- PLDT JIREH -->
+  <rect x="20" y="125" width="115" height="50" rx="5" fill="#9B59B6" stroke="#6C3483" stroke-width="2"/>
+  <text x="77" y="146" class="lbl" fill="#fff">PLDT H153</text>
+  <text x="77" y="162" class="sub" fill="#fff">FVR JIREH / WAN 2</text>
+
+  <!-- ═══════════════════════════════════════════════════
+       ASUS ROG RAPTURE  (col 2, x=210)
+  ═══════════════════════════════════════════════════ -->
+  <rect x="205" y="65" width="150" height="78" rx="5" fill="#FF8C42" stroke="#C0550A" stroke-width="2"/>
+  <text x="280" y="89"  class="lbl" fill="#111">ASUS ROG Rapture</text>
+  <text x="280" y="106" class="sub" fill="#111">WiFi 7 · FVR MAIN</text>
+  <text x="280" y="121" class="sub" fill="#111">10.3.66.1</text>
+
+  <!-- WAN 1: Starlink → ASUS -->
+  <line x1="135" y1="77" x2="205" y2="97" stroke="#2980B9" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="163" y="74" class="edge">WAN 1</text>
+
+  <!-- WAN 2: JIREH → ASUS -->
+  <line x1="135" y1="150" x2="205" y2="120" stroke="#6C3483" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="157" y="148" class="edge">WAN 2</text>
+
+  <!-- ═══════════════════════════════════════════════════
+       NETWORK SWITCH  (col 3, x=430)
+  ═══════════════════════════════════════════════════ -->
+  <rect x="425" y="78" width="115" height="52" rx="5" fill="#888" stroke="#555" stroke-width="2"/>
+  <text x="482" y="100" class="lbl" fill="#111">Network Switch</text>
+  <text x="482" y="116" class="sub" fill="#111">LAN distribution</text>
+
+  <!-- ASUS → Switch -->
+  <line x1="355" y1="104" x2="425" y2="104" stroke="#444" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="388" y="99" class="edge">LAN</text>
+
+  <!-- ═══════════════════════════════════════════════════
+       AJA HELO  (col 4, x=608)
+  ═══════════════════════════════════════════════════ -->
+  <rect x="605" y="78" width="115" height="52" rx="5" fill="#E67E22" stroke="#A04000" stroke-width="2"/>
+  <text x="662" y="100" class="lbl" fill="#111">AJA Helo</text>
+  <text x="662" y="116" class="sub" fill="#111">DHCP → Restream</text>
+
+  <!-- Switch → AJA -->
+  <line x1="540" y1="100" x2="605" y2="100" stroke="#444" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="570" y="95" class="edge">LAN</text>
+
+  <!-- ═══════════════════════════════════════════════════
+       MESH NODES  (below ASUS)
+  ═══════════════════════════════════════════════════ -->
+
+  <!-- CRTVS / VIP 2 -->
+  <rect x="205" y="200" width="100" height="42" rx="5" fill="#20B2AA" stroke="#148A83" stroke-width="2"/>
+  <text x="255" y="218" class="lbl" fill="#111">X50 Mesh</text>
+  <text x="255" y="234" class="sub" fill="#111">CRTVS / VIP 2</text>
+
+  <!-- Babies -->
+  <rect x="330" y="200" width="88" height="42" rx="5" fill="#20B2AA" stroke="#148A83" stroke-width="2"/>
+  <text x="374" y="218" class="lbl" fill="#111">X50 Mesh</text>
+  <text x="374" y="234" class="sub" fill="#111">Babies</text>
+
+  <!-- WiFi backhaul from ASUS bottom (280,143) -->
+  <line x1="262" y1="143" x2="255" y2="200" stroke="#20B2AA" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr-teal)"/>
+  <text x="218" y="178" class="edge" fill="#148A83">WiFi</text>
+  <line x1="278" y1="143" x2="374" y2="200" stroke="#20B2AA" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr-teal)"/>
+  <text x="333" y="168" class="edge" fill="#148A83">WiFi</text>
+
+  <!-- ═══════════════════════════════════════════════════
+       DEDICATED STREAM PATH  (right col)
+       PLDT RESI  → Resi Encoder
+  ═══════════════════════════════════════════════════ -->
+
+  <!-- Separator -->
+  <line x1="748" y1="50" x2="748" y2="370" stroke="#ccc" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="824" y="44" class="section">Stream Path</text>
+
+  <!-- PLDT RESI -->
+  <rect x="755" y="72" width="120" height="50" rx="5" fill="#9B59B6" stroke="#6C3483" stroke-width="2"/>
+  <text x="815" y="93"  class="lbl" fill="#fff">PLDT H153</text>
+  <text x="815" y="109" class="sub" fill="#fff">FVR RESI</text>
+
+  <!-- Resi Encoder -->
+  <rect x="755" y="170" width="120" height="52" rx="5" fill="#C0392B" stroke="#922B21" stroke-width="2"/>
+  <text x="815" y="192" class="lbl" fill="#fff">Resi Encoder</text>
+  <text x="815" y="208" class="sub" fill="#fff">studio.resi.io</text>
+
+  <!-- PLDT RESI → Resi Encoder (direct) -->
+  <line x1="815" y1="122" x2="815" y2="170" stroke="#C0392B" stroke-width="2.5" marker-end="url(#arr-red)"/>
+  <text x="820" y="150" class="edge" fill="#C0392B">direct</text>
+
+  <!-- ═══════════════════════════════════════════════════
+       LEGEND
+  ═══════════════════════════════════════════════════ -->
+  <line x1="20" y1="380" x2="880" y2="380" stroke="#ddd" stroke-width="1"/>
+  <rect x="20" y="390" width="860" height="76" rx="4" fill="#eee" stroke="#ccc" stroke-width="1"/>
+
+  <!-- Row 1 -->
+  <rect x="30"  y="400" width="14" height="14" rx="2" fill="#87CEEB" stroke="#2980B9" stroke-width="1"/>
+  <text x="48"  y="411" class="edge">Starlink (WAN 1)</text>
+  <rect x="165" y="400" width="14" height="14" rx="2" fill="#9B59B6" stroke="#6C3483" stroke-width="1"/>
+  <text x="183" y="411" class="edge">5G Router / WAN</text>
+  <rect x="310" y="400" width="14" height="14" rx="2" fill="#FF8C42" stroke="#C0550A" stroke-width="1"/>
+  <text x="328" y="411" class="edge">Main Router (ASUS)</text>
+  <rect x="473" y="400" width="14" height="14" rx="2" fill="#888" stroke="#555" stroke-width="1"/>
+  <text x="491" y="411" class="edge">Network Switch</text>
+
+  <!-- Row 2 -->
+  <rect x="30"  y="423" width="14" height="14" rx="2" fill="#20B2AA" stroke="#148A83" stroke-width="1"/>
+  <text x="48"  y="434" class="edge">WiFi Mesh (dashed = wireless)</text>
+  <rect x="235" y="423" width="14" height="14" rx="2" fill="#E67E22" stroke="#A04000" stroke-width="1"/>
+  <text x="253" y="434" class="edge">AJA Helo → Restream</text>
+  <rect x="390" y="423" width="14" height="14" rx="2" fill="#C0392B" stroke="#922B21" stroke-width="1"/>
+  <text x="408" y="434" class="edge">Resi Encoder (dedicated via FVR RESI)</text>
+
+  <!-- Row 3 note -->
+  <text x="30" y="458" class="edge" fill="#555">Note: PLDT RESI connects directly to the Resi Encoder — it does not pass through the ASUS router or the main network switch.</text>
+
+</svg>
