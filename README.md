@@ -538,7 +538,7 @@ When in doubt: restart the device, wait 60 seconds, re-test. Most issues are phy
 2. Check physical cable from Starlink dish to ASUS ROG Rapture WAN port — any damage or loose connection?
 3. Power cycle Starlink (unplug, wait 30 s, replug); wait 2 min for reconnect
 4. Re-run speedtest — is it recovering?
-5. If still down: fail over to PLDT JIREH (FVR JIREH — already feeds Rapture as WAN 2; confirm it's active in ASUS admin panel `10.3.66.1`)
+5. If still down: fail over to PLDT JIREH (FVR JIREH — already feeds Rapture as WAN 2; confirm it's active in ASUS admin panel `10.6.33.1`)
 6. Re-run speedtest; confirm ≥80 Mbps on failover
 7. Alert Captain; document in post-service debrief
 
@@ -587,7 +587,7 @@ When in doubt: restart the device, wait 60 seconds, re-test. Most issues are phy
 1. Confirm test is LAN-wired (not WiFi) — WiFi must be OFF on test device
 2. Check if large uploads are running (CRTVS upload, Resi upload) — ask CRTVS to pause during critical pre-service window if possible
 3. Check Starlink app for congestion or throttling notice
-4. Check ASUS admin panel (10.3.66.1) for unusual client count or bandwidth hog
+4. Check ASUS admin panel (10.6.33.1) for unusual client count or bandwidth hog
 5. If LAN speed cannot be recovered: confirm streaming devices can failover to PLDT JIREH (WAN 2 already active on ASUS) or standalone 5G backup SSIDs
 6. Alert Captain with measured speed and which connection is currently in use
 
@@ -664,7 +664,7 @@ WAN Sources
   └── PLDT H153 (FVR JIREH) ┤ WAN 1 + WAN 2
                              ▼
                      ASUS ROG Rapture GT-BE98
-                     FVR MAIN · 10.3.66.1 · WiFi 7
+                     FVR MAIN · 10.6.33.1 · WiFi 7
                           │
                 ┌─────────┴──────────┐
                 │ LAN                │ WiFi backhaul (dashed)
@@ -706,7 +706,7 @@ WAN Sources
   └── PLDT H153 (FVR JIREH) ┤ WAN 1 + WAN 2
                              ▼
                      ASUS ROG Rapture GT-BE98
-                     FVR MAIN · 10.3.66.1 · WiFi 7
+                     FVR MAIN · 10.6.33.1 · WiFi 7
                           │
                 ┌─────────┴──────────┐
                 │ LAN                │ WiFi backhaul
@@ -752,10 +752,10 @@ Deprecated floor plans are in [`Internet Schematic/floor-plans/archive/`](Intern
 
 | Device | IP | Username | Password | Notes |
 |---|---|---|---|---|
-| ASUS ROG Rapture (FVR MAIN + FVR CCTV) | 10.3.66.1 | `favor` | [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0) | WiFi 7 main router |
+| ASUS ROG Rapture (FVR MAIN + FVR CCTV) | 10.6.33.1 | `favor` | [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0) | WiFi 7 main router |
 | PLDT H153 — Jireh | 10.3.1.1 | [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0) | [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0) | WAN 2 into ASUS |
 | PLDT H153 — Resi | 10.2.1.1 | [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0) | [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0) | Dedicated to Resi Encoder |
-| Unicom 5G — FVR UNICOM | 10.101.0.1 | [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0) | [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0) | Standalone backup |
+| Unicom 5G — FVR UNICOM | 10.102.0.1 | [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0) | [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0) | Standalone backup |
 | Unicom 5G — FVR SHILOH | 10.101.0.1 | [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0) | [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0) | Standalone backup (no SIM) |
 | ~~Load Balancer (TP-Link ER605)~~ | ~~10.100.0.1~~ | ~~`favor`~~ | ~~[********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0)~~ | **DEPRECATED** |
 
