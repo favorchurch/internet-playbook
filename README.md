@@ -440,7 +440,7 @@ __
 
 ### Stream Diagram
 
-Visual flow: [`Internet Schematic/diagrams/stream-diagram.svg`](Internet%20Schematic/diagrams/stream-diagram.svg)
+![Stream diagram](Internet%20Schematic/diagrams/stream-diagram.svg)
 
 **ASCII version:**
 
@@ -652,8 +652,9 @@ When in doubt: restart the device, wait 60 seconds, re-test. Most issues are phy
 
 ![Ynares Sports Arena floor plan v6-2026-03-03](Internet%20Schematic/floor-plans/ynares-v6-2026-03-03.png)
 
-**Network topology diagram:**  
-[`Internet Schematic/diagrams/ynares-topology.svg`](Internet%20Schematic/diagrams/ynares-topology.svg)
+**Network topology diagram:**
+
+![Ynares network topology](Internet%20Schematic/diagrams/ynares-topology.svg)
 
 **Network topology (text):**
 
@@ -693,8 +694,9 @@ Standalone backup SSIDs (independent from main network):
 
 ![Metrotent floor plan v2026-01-16](Internet%20Schematic/floor-plans/metrotent-v2026-01-16.png)
 
-**Network topology diagram:**  
-[`Internet Schematic/diagrams/metrotent-topology.svg`](Internet%20Schematic/diagrams/metrotent-topology.svg)
+**Network topology diagram:**
+
+![Metrotent network topology](Internet%20Schematic/diagrams/metrotent-topology.svg)
 
 **Network topology (text):**
 
