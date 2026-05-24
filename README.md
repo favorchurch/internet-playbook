@@ -27,7 +27,7 @@
 
 The Favor Manila Internet Team keeps Sunday running. We lay the cables, place the mesh nodes, watch the stream, and make sure every person — whether in the room or watching from home — experiences the service without interruption. We're a small team doing behind-the-scenes work that most people never notice, and that's exactly how we like it.
 
-This document is the one place that has everything: roles, schedules, playbooks, credentials, floor plans. If you're a new volunteer figuring out what your role actually means, start here. If you're a Captain setting up for a 6 AM Sunday, start here. If something's broken and you need to fix it fast, go to §8.
+This document is the one place that has everything: roles, schedules, playbooks, credentials, floor plans. If you're a new volunteer figuring out what your role actually means, start here. If you're a Captain setting up for a 6 AM Sunday, start here. If something's broken and you need to fix it fast, go to [§8](#8-troubleshooting).
 
 **Quick links:**
 - Roster → [favor.church/techroster](https://favor.church/techroster)
@@ -60,7 +60,7 @@ For new volunteers on their first rostered Sunday:
 - [ ] Arrive by 6:00 AM
 - [ ] Find the Captain at setup or text them when you arrive
 - [ ] Listen closely at the 9:00 AM all-in huddle — the Captain walks through any changes
-- [ ] Follow your role's duty list in §4
+- [ ] Follow your role's duty list in [§4](#4-roles)
 - [ ] Ask your buddy or the Captain if anything is unclear — no question is dumb on Day 1
 
 ---
@@ -168,11 +168,11 @@ The Stream Op monitors the live stream quality throughout both services. They wa
 The Troubleshooting volunteer is the technical first-responder for network issues during the service. They know the IP scheme, router admin panels, and mesh topology, and can diagnose problems without escalating everything to the Captain.
 
 **Duties:**
-- Memorize IP scheme before Sunday (see §11 Credentials)
+- Memorize IP scheme before Sunday (see [§11 Credentials](#11-credentials))
 - During setup: verify all routers and mesh nodes are online
 - During service: respond to Asst Captain's field reports; access admin panels to diagnose
 - Log any resolved or unresolved issues for post-service debrief
-- Reference §8 Troubleshooting playbooks
+- Reference [§8 Troubleshooting playbooks](#8-troubleshooting)
 
 **Hands off to:** Captain if issue cannot be resolved within 5 minutes.
 
@@ -219,7 +219,7 @@ The Cable Hands volunteer lays all data and power cables across the venue during
 - Lay and label all Ethernet runs from switch to fixed positions (Broadcast Table, Arena PCs, Resi encoder)
 - Tape down and manage all cable runs in public walking areas (trip hazards = incident)
 - Confirm all wired connections show green link lights before 9:00 AM
-- During packdown: collect and coil all cables; store in Box 1 (see §9 Equipment)
+- During packdown: collect and coil all cables; store in Box 1 (see [§9 Equipment](#9-equipment))
 
 > **Note:** Cable Hands and CCTV are two separate roles. Do not double-assign.
 
@@ -275,7 +275,7 @@ Leads cable collection during packdown.
 **Duties:**
 - Collect all Ethernet cables from switch positions and venue runs
 - Coil cables correctly (over-under method); label if needed
-- Store in Box 1 per §9 Equipment inventory
+- Store in Box 1 per [§9 Equipment](#9-equipment) inventory
 
 ---
 
@@ -290,7 +290,7 @@ Two assistants supporting the Cable lead. They retrieve cables from distant posi
 Packs all equipment into storage boxes and performs the end-of-day inventory audit.
 
 **Duties:**
-- Pack all gear into boxes per §9 inventory list
+- Pack all gear into boxes per [§9](#9-equipment) inventory list
 - Perform item-by-item audit against the box inventory
 - Flag any missing items to the Captain before anyone leaves
 - Confirm all boxes are sealed and stored correctly
@@ -315,7 +315,7 @@ Same volunteer as the setup AI Operator.
 - [ ] Full team arrival confirmed via GC
 - [ ] Retrieve all equipment boxes from storage
 - [ ] Begin cable runs: Switch → Broadcast Table, Switch → Arena PCs, Switch → Resi Encoder
-- [ ] Asst Captain assigns mesh node positions per venue layout (see §10)
+- [ ] Asst Captain assigns mesh node positions per venue layout (see [§10](#10-venue-diagrams))
 - [ ] CCTV: cameras out, connecting to FVR CCTV
 - [ ] AI Operator: M-Audio and printer cable to MC2, SPF.IO login confirmed
 
@@ -385,7 +385,7 @@ Same volunteer as the setup AI Operator.
 
 ### Timing Table
 
-See full schedule in §3. Key toggle moments:
+See full schedule in [§3](#3-schedule). Key toggle moments:
 
 | Time | Action | Who |
 |---|---|---|
@@ -500,7 +500,7 @@ AI Translations (SPF.IO) at MC2
 
 **Step 5 — Mesh node retrieval**
 - Runner/Speedtester and Asst Captain retrieve all X50 nodes
-- Count all nodes before packing (check against §9 Equipment — 7 nodes for Ynares, 2 for Metrotent)
+- Count all nodes before packing (check against [§9 Equipment](#9-equipment) — 7 nodes for Ynares, 2 for Metrotent)
 
 **Step 6 — CCTV packdown**
 - CCTV volunteer retrieves all Tapo C200C cameras
@@ -570,7 +570,7 @@ When in doubt: restart the device, wait 60 seconds, re-test. Most issues are phy
 
 **Symptoms:** One area reports no WiFi or speed < 80 Mbps at that position.
 
-1. Identify which X50 node serves the area (see §10 Venue Diagrams)
+1. Identify which X50 node serves the area (see [§10 Venue Diagrams](#10-venue-diagrams))
 2. Check node LED: solid blue = good; red/amber/off = problem
 3. In TP-Link Deco app (`net@favor.church` / [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0)): check node status — does it show as Ethernet-wired or wireless backhaul?
 4. If wireless backhaul instead of Ethernet: check the Ethernet cable to that node; reseat if loose
@@ -774,7 +774,7 @@ Deprecated floor plans are in [`Internet Schematic/floor-plans/archive/`](Intern
 
 Passwords rotate periodically. The **Captain** is responsible for sharing updated credentials with relevant staff and volunteers when a rotation happens. When you receive a rotation notice:
 1. Update the relevant row(s) in this section
-2. Add a line to the version history in §12 with the date and what changed (no need to list the new password in the history)
+2. Add a line to the version history in [§12](#12-appendix) with the date and what changed (no need to list the new password in the history)
 3. Notify relevant team members via GC
 
 ---
@@ -802,32 +802,6 @@ Passwords rotate periodically. The **Captain** is responsible for sharing update
 | **MC2** | AI Operator position — the second control station near production. |
 | **Magic Data** | Prepaid mobile data plan used by FVR UNICOM and FVR SHILOH (Unicom 5G routers). |
 | **Broadcast Table** | The main production table where the Captain, Stream Op, and core stream equipment are positioned. |
-
----
-
-### Migration Notes
-
-This masterfile was created **2026-05-24** to consolidate and replace:
-
-| Source | ID / Location | Status |
-|---|---|---|
-| Internet Schematic Google Slides | `1uGVDMJ8plObs9qfFBCXS6T3lSvJkxe-YSK6cTVcoZII` | **DEPRECATED** — PDF preserved in `Internet Schematic/internet-schematic-slides.pdf` |
-| Passwords Google Sheet | `1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o` | **DEPRECATED** — all credentials migrated to §11 |
-| Tech Sunday Checklist PDF | `Tech Sunday Checklist.pdf` (local) | Kept as historical reference |
-
-**Inconsistencies resolved during migration (user-confirmed):**
-
-| Item | Slides value | Sheet value | Authoritative (this file) |
-|---|---|---|---|
-| FVR MAIN password | [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0) | [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0) | **[********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0)** |
-| FVR CRTVS SOCIALS password | [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0) (old SSID name) | [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0) | **[********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0)** |
-| FVR KIDS password | [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0) | [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0) | **[********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0)** |
-| Main router | TP-Link (slides) | ASUS ROG Rapture (sheet) | **ASUS ROG Rapture GT-BE98** |
-| FVR PROD WORSHIP | Listed as active | — | **DEPRECATED** |
-| FVR STAFF | Listed as active | — | **DEPRECATED** |
-| Load Balancer (TP-Link ER605) | Listed as admin | Listed as admin | **DEPRECATED** |
-| Network topology — JIREH | Shown as standalone 5G | — | **WAN 2 input into ASUS Rapture** |
-| Network topology — RESI | Shown as standalone 5G | — | **Direct connection to Resi Encoder** |
 
 ---
 
