@@ -11,16 +11,14 @@
 **People**
 - [1. Welcome](#1-welcome)
 - [2. As a Volunteer](#2-as-a-volunteer)
-- [4. Roles](#4-roles)
 
 **Sunday Flow**
 - [3. Schedule](#3-schedule)
 - [Sunday Command Center](#sunday-command-center)
+- [4. Roles](#4-roles)
 - [5. Setup Playbook](#5-setup-playbook)
-- [7. Packdown Playbook](#7-packdown-playbook)
-
-**Streaming**
 - [6. Stream Toggle Sequence](#6-stream-toggle-sequence)
+- [7. Packdown Playbook](#7-packdown-playbook)
 
 **Troubleshooting**
 - [8. Troubleshooting](#8-troubleshooting)
