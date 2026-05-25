@@ -1,0 +1,10 @@
+{
+  "name": "slide-generator",
+  "version": "1.0.0",
+  "description": "Programmatic slide generator for Favor Manila Internet Team SOP",
+  "main": "generate.js",
+  "type": "module",
+  "dependencies": {
+    "pptxgenjs": "^3.12.0"
+  }
+}
