@@ -1,7 +1,7 @@
 # Favor Manila Internet Team — Master SOP
 
 > **Single source of truth** as of 2026-05-24.  
-> Replaces: Internet Schematic Google Slides · Passwords Google Sheet  
+> Passwords: [Google Sheet]((https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0))  
 > Roster: [favor.church/techroster](https://favor.church/techroster) · Reference assets: [`Internet Schematic/`](Internet%20Schematic/)
 
 ---
