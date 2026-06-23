@@ -1,3 +1,9 @@
+/**
+ * @fileoverview Main generator script for Favor Manila Internet Team SOP slide deck.
+ * Programmatically constructs a standard 4:3 presentation using pptxgenjs.
+ * 
+ * Run with: node generate.js
+ */
 import pptxgen from "pptxgenjs";
 import path from "path";
 
@@ -22,11 +28,22 @@ const COLORS = {
 };
 
 // Helper: Create Standard Background
+/**
+ * Sets the background color of the slide.
+ * @param {object} slide - The pptxgen slide object.
+ * @param {boolean} [isDivider=false] - Whether the slide is a section divider.
+ */
 function setSlideBackground(slide, isDivider = false) {
   slide.background = { fill: isDivider ? COLORS.bg : COLORS.white };
 }
 
 // Helper: Add Title
+/**
+ * Adds a title block and optional category header to the slide.
+ * @param {object} slide - The pptxgen slide object.
+ * @param {string} text - The title text.
+ * @param {string} [category=""] - Optional module category text.
+ */
 function addSlideTitle(slide, text, category = "") {
   if (category) {
     slide.addText(category.toUpperCase(), {
@@ -54,6 +71,15 @@ function addSlideTitle(slide, text, category = "") {
 }
 
 // Helper: Draw Card
+/**
+ * Draws a rounded rectangle card on the slide with themed background and border colors.
+ * @param {object} slide - The pptxgen slide object.
+ * @param {number} x - The x-coordinate in inches.
+ * @param {number} y - The y-coordinate in inches.
+ * @param {number} w - The width in inches.
+ * @param {number} h - The height in inches.
+ * @param {string} [fillType="normal"] - The card theme type ("normal", "blue", "red", "orange").
+ */
 function addCard(slide, x, y, w, h, fillType = "normal") {
   let fill = COLORS.cardBg;
   let lineColor = COLORS.cardLine;
@@ -77,6 +103,22 @@ function addCard(slide, x, y, w, h, fillType = "normal") {
 }
 
 // Helper: Add Bullet List
+/**
+ * Adds a list of bullet points with rich formatting options onto a slide.
+ * @param {object} slide - The pptxgen slide object.
+ * @param {Array<object>} items - Array of bullet items to add.
+ * @param {string} items[].text - Text content of the bullet point.
+ * @param {boolean} [items[].bullet] - Whether to show the bullet symbol.
+ * @param {boolean} [items[].bold] - Bold text style.
+ * @param {string} [items[].color] - Hex color of the text.
+ * @param {number} [items[].fontSize] - Text font size.
+ * @param {string} [items[].fontFace] - Font face (e.g. "Inter").
+ * @param {number} [items[].indent] - Bullet indentation level.
+ * @param {number} x - The x-coordinate in inches.
+ * @param {number} y - The y-coordinate in inches.
+ * @param {number} w - The width in inches.
+ * @param {number} h - The height in inches.
+ */
 function addBulletList(slide, items, x, y, w, h) {
   let textObjects = [];
   items.forEach((item, index) => {
@@ -97,6 +139,16 @@ function addBulletList(slide, items, x, y, w, h) {
 }
 
 // Helper: Add Card Header
+/**
+ * Adds a header text block for cards on the slide.
+ * @param {object} slide - The pptxgen slide object.
+ * @param {string} text - Header text.
+ * @param {number} x - The x-coordinate in inches.
+ * @param {number} y - The y-coordinate in inches.
+ * @param {number} w - The width in inches.
+ * @param {number} [h=0.4] - The height in inches.
+ * @param {boolean} [isAlert=false] - Whether to render with alert styling (red).
+ */
 function addCardHeader(slide, text, x, y, w, h = 0.4, isAlert = false) {
   slide.addText(text.toUpperCase(), {
     x, y, w, h,
@@ -108,6 +160,13 @@ function addCardHeader(slide, text, x, y, w, h = 0.4, isAlert = false) {
 }
 
 // Helper: Add Section Divider Slide
+/**
+ * Creates and appends a module section divider slide to the presentation.
+ * @param {object} pptx - The main presentation object.
+ * @param {string} moduleTitle - The main module title text.
+ * @param {string} subtitle - Subtitle describing section coverage.
+ * @returns {object} The created slide object.
+ */
 function addSectionDivider(pptx, moduleTitle, subtitle) {
   let slide = pptx.addSlide();
   setSlideBackground(slide, true);
