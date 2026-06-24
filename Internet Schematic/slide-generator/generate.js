@@ -1,5 +1,8 @@
 import pptxgen from "pptxgenjs";
 import path from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // Initialize Presentation
 const pptx = new pptxgen();
@@ -1360,7 +1363,7 @@ addSectionDivider(pptx, "Module 7: Troubleshooting Playbooks", "Core Diagnostic 
 }
 
 // Write the PowerPoint presentation to a file
-const outputFilePath = path.join("/Users/rico/Documents/Claude/Projects/Tech Team/Internet Schematic", "Favor_Manila_Internet_Team_SOP.pptx");
+const outputFilePath = path.resolve(__dirname, "..", "Favor_Manila_Internet_Team_SOP.pptx");
 pptx.writeFile({ fileName: outputFilePath })
   .then(fileName => {
     console.log(`PowerPoint file generated successfully at: ${fileName}`);
