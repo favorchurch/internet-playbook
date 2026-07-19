@@ -8,18 +8,36 @@
 
 ## Table of Contents
 
-1. [Welcome](#1-welcome)
-2. [As a Volunteer](#2-as-a-volunteer)
-3. [Schedule](#3-schedule)
-4. [Roles](#4-roles)
-5. [Setup Playbook](#5-setup-playbook)
-6. [Stream Toggle Sequence](#6-stream-toggle-sequence)
-7. [Packdown Playbook](#7-packdown-playbook)
-8. [Troubleshooting](#8-troubleshooting)
-9. [Equipment](#9-equipment)
-10. [Venue Diagrams](#10-venue-diagrams)
-11. [Credentials](#11-credentials)
-12. [Appendix](#12-appendix)
+**People**
+- [1. Welcome](#1-welcome)
+- [2. As a Volunteer](#2-as-a-volunteer)
+
+**Sunday Flow**
+- [3. Schedule](#3-schedule)
+- [Sunday Command Center](#sunday-command-center)
+- [4. Roles](#4-roles)
+- [5. Setup Playbook](#5-setup-playbook)
+- [6. Stream Toggle Sequence](#6-stream-toggle-sequence)
+- [7. Packdown Playbook](#7-packdown-playbook)
+
+**Troubleshooting**
+- [8. Troubleshooting](#8-troubleshooting)
+
+**Reference**
+- [9. Equipment](#9-equipment)
+- [10. Venue Diagrams](#10-venue-diagrams)
+- [11. Credentials](#11-credentials)
+- [12. Appendix](#12-appendix)
+
+---
+
+## Start Here
+
+| Who are you? | Go to |
+|---|---|
+| New volunteer | [§2 As a Volunteer](#2-as-a-volunteer) |
+| Captain on Sunday | [Sunday Command Center](#sunday-command-center) |
+| Something broke | [§8 Troubleshooting](#8-troubleshooting) |
 
 ---
 
@@ -106,7 +124,33 @@ Same SOP applies with a lean roster. The Captain confirms required roles per eve
 
 ---
 
+## Sunday Command Center
+
+> Quick-reference for Captains. Full schedule in [§3 Schedule](#3-schedule).
+
+| Time | Checkpoint | Who |
+|---|---|---|
+| 7:00 AM | Restream ON · Favor Production = unlisted | Captain |
+| 7:30 AM | **Deadline**: AJA link sent to STREAM ASSIST TEAM GC | Captain |
+| 9:45 AM | Favor Production YT link sent to GC · stream visibility confirmed | Captain |
+| 9:55 AM | **Contingency**: if Resi NOT live → trigger AJA Backup Streams | Captain |
+| Service end | ALL streams OFF: Resi encoder + Restream | Captain |
+
+> 🚨 **9:55 AM window**: If Resi is not live by 9:55 AM, Captain triggers AJA Backup Streams immediately and Stream Comms alerts all 4 GCs. Do not wait past 9:55.
+
+> 🚨 **7:30 AM deadline**: AJA Restream link MUST be sent to STREAM ASSIST TEAM GC by 7:30 AM. Late delivery blocks downstream teams.
+
+> 🚨 **9:45 AM go-live**: Confirm visibility before sending link — Favor Production = unlisted · Favor Church Manila = unlisted backup · iWantTV = public · Facebook = OFF.
+
+---
+
 ## 4. Roles
+
+**Jump to a role:**
+
+Setup: [Captain](#captain) · [Asst Captain](#asst-captain) · [Stream Op](#stream-op) · [Troubleshooting](#troubleshooting) · [Runner / Speedtester](#runner--speedtester) · [Stream Comms](#stream-comms) · [Cable Hands](#cable-hands) · [CCTV](#cctv) · [AI Operator](#ai-operator)
+
+Packdown: [Captain](#captain-packdown) · [Cable](#cable-packdown) · [Cable Asst](#cable-asst-2-packdown) · [Tetris Master](#tetris-master-packdown) · [AI Operator](#ai-operator-packdown)
 
 ### Setup Roles (9)
 
@@ -115,6 +159,9 @@ Same SOP applies with a lean roster. The Captain confirms required roles per eve
 #### Captain
 
 The Captain owns the Sunday. They are the last decision-maker for all stream, network, and team issues. They run the 9:00 AM and 3:00 PM huddles, handle all stream toggle actions, and are the escalation point for every role on the team.
+
+<details>
+<summary>Duties & Handoffs</summary>
 
 **Duties:**
 - Arrive at 6:00 AM; begin setup oversight
@@ -131,11 +178,16 @@ The Captain owns the Sunday. They are the last decision-maker for all stream, ne
 
 **Hands off to:** Asst Captain for venue-floor coverage while Captain is at Broadcast Table.
 
+</details>
+
 ---
 
 #### Asst Captain
 
 The Asst Captain is the Captain's eyes and ears across the venue floor. They handle field issues — slow zones, disconnected devices, mesh node problems — so the Captain can stay focused on the stream console.
+
+<details>
+<summary>Duties & Handoffs</summary>
 
 **Duties:**
 - Arrive at 6:00 AM; assist with mesh node placement and cable route decisions
@@ -146,11 +198,16 @@ The Asst Captain is the Captain's eyes and ears across the venue floor. They han
 
 **Hands off to:** Captain for all stream-critical decisions.
 
+</details>
+
 ---
 
 #### Stream Op
 
 The Stream Op monitors the live stream quality throughout both services. They watch the Resi encoder, Restream dashboard, and YouTube/iWantTV outputs, and immediately alert the Captain if anything drops or degrades.
+
+<details>
+<summary>Duties & Handoffs</summary>
 
 **Duties:**
 - Confirm Resi encoder is online and receiving signal before 9:48 AM auto-trigger
@@ -161,11 +218,16 @@ The Stream Op monitors the live stream quality throughout both services. They wa
 
 **Hands off to:** Captain for all toggle decisions — Stream Op monitors, Captain acts.
 
+</details>
+
 ---
 
 #### Troubleshooting
 
 The Troubleshooting volunteer is the technical first-responder for network issues during the service. They know the IP scheme, router admin panels, and mesh topology, and can diagnose problems without escalating everything to the Captain.
+
+<details>
+<summary>Duties & Handoffs</summary>
 
 **Duties:**
 - Memorize IP scheme before Sunday (see [§11 Credentials](#11-credentials))
@@ -176,11 +238,16 @@ The Troubleshooting volunteer is the technical first-responder for network issue
 
 **Hands off to:** Captain if issue cannot be resolved within 5 minutes.
 
+</details>
+
 ---
 
 #### Runner / Speedtester
 
 The Runner is the team's physical logistics link. They carry cables and gear between areas, run speedtests across the venue, and stay mobile throughout the service.
+
+<details>
+<summary>Duties & Handoffs</summary>
 
 **Duties:**
 - Arrive at 6:00 AM; assist with cable carries and mesh node transport
@@ -189,11 +256,16 @@ The Runner is the team's physical logistics link. They carry cables and gear bet
 - Remain mobile and available for ad-hoc fetch/carry requests during service
 - Assist with packdown carry duties after service
 
+</details>
+
 ---
 
 #### Stream Comms
 
 The Stream Comms volunteer manages all four communication GCs during the service. They are the information bridge between the Internet Team, other ministry teams, and platform contacts.
+
+<details>
+<summary>Duties & Handoffs</summary>
 
 **Duties:**
 - Monitor and post in all 4 GCs:
@@ -208,11 +280,16 @@ The Stream Comms volunteer manages all four communication GCs during the service
 
 **Hands off to:** Captain for any decisions triggered by GC reports.
 
+</details>
+
 ---
 
 #### Cable Hands
 
 The Cable Hands volunteer lays all data and power cables across the venue during setup. They ensure every cable run is clean, taped down, and live before the service starts.
+
+<details>
+<summary>Duties & Handoffs</summary>
 
 **Duties:**
 - Arrive at 6:00 AM
@@ -220,6 +297,8 @@ The Cable Hands volunteer lays all data and power cables across the venue during
 - Tape down and manage all cable runs in public walking areas (trip hazards = incident)
 - Confirm all wired connections show green link lights before 9:00 AM
 - During packdown: collect and coil all cables; store in Box 1 (see [§9 Equipment](#9-equipment))
+
+</details>
 
 > **Note:** Cable Hands and CCTV are two separate roles. Do not double-assign.
 
@@ -229,11 +308,16 @@ The Cable Hands volunteer lays all data and power cables across the venue during
 
 The CCTV volunteer sets up and monitors the Tapo C200C cameras connected to the FVR CCTV network.
 
+<details>
+<summary>Duties & Handoffs</summary>
+
 **Duties:**
 - Arrive at 6:00 AM; retrieve CCTV cameras from storage
 - Connect each Tapo C200C to FVR CCTV ([********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0)); confirm feeds in the Tapo app (`net@favor.church` / [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0))
 - Position cameras per the Captain's direction for the venue
 - During packdown: retrieve cameras, confirm offline in Tapo app, store in equipment box
+
+</details>
 
 > **Note:** CCTV and Cable Hands are separate roles. Do not double-assign.
 
@@ -243,12 +327,17 @@ The CCTV volunteer sets up and monitors the Tapo C200C cameras connected to the 
 
 The AI Operator runs SPF.IO live translation, providing real-time translated subtitles during the sermon. The connection requires physical hardware at MC2.
 
+<details>
+<summary>Duties & Handoffs</summary>
+
 **Duties:**
 - Before service: connect M-Audio USB audio interface at MC2; connect printer cable to SPF.IO input
 - Confirm SPF.IO login: `tech@favor.church` / [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0); confirm audio signal is routing correctly
 - At Captain's signal (~10:30 AM): manually trigger AI Translations ON
 - At Captain's signal (~11:30 AM, before ministry time): manually trigger AI Translations OFF
 - During packdown: disconnect M-Audio and printer cable; store in equipment box
+
+</details>
 
 ---
 
@@ -260,11 +349,16 @@ The AI Operator runs SPF.IO live translation, providing real-time translated sub
 
 Oversees full packdown. Confirms all streams are OFF before packdown begins. Runs post-service huddle. Signs off on Tetris Master's equipment audit.
 
+<details>
+<summary>Duties & Handoffs</summary>
+
 **Duties:**
 - Confirm Resi encoder and Restream are both OFF after service ends
 - Run post-service huddle (5–10 min debrief; shout-outs; issues log)
 - Confirm CRTVS area stays active until upload is complete before giving the all-clear
 - Sign off on Tetris Master's inventory check before anyone leaves
+
+</details>
 
 ---
 
@@ -272,10 +366,15 @@ Oversees full packdown. Confirms all streams are OFF before packdown begins. Run
 
 Leads cable collection during packdown.
 
+<details>
+<summary>Duties & Handoffs</summary>
+
 **Duties:**
 - Collect all Ethernet cables from switch positions and venue runs
 - Coil cables correctly (over-under method); label if needed
 - Store in Box 1 per [§9 Equipment](#9-equipment) inventory
+
+</details>
 
 ---
 
@@ -289,11 +388,16 @@ Two assistants supporting the Cable lead. They retrieve cables from distant posi
 
 Packs all equipment into storage boxes and performs the end-of-day inventory audit.
 
+<details>
+<summary>Duties & Handoffs</summary>
+
 **Duties:**
 - Pack all gear into boxes per [§9](#9-equipment) inventory list
 - Perform item-by-item audit against the box inventory
 - Flag any missing items to the Captain before anyone leaves
 - Confirm all boxes are sealed and stored correctly
+
+</details>
 
 ---
 
@@ -301,16 +405,23 @@ Packs all equipment into storage boxes and performs the end-of-day inventory aud
 
 Same volunteer as the setup AI Operator.
 
+<details>
+<summary>Duties & Handoffs</summary>
+
 **Duties:**
 - Disconnect M-Audio interface and printer cable from MC2
 - Confirm SPF.IO session is closed / logged out
 - Store hardware in the designated equipment box
+
+</details>
 
 ---
 
 ## 5. Setup Playbook
 
 ### 6:00 AM — Gather
+
+**✅ Do this live**
 
 - [ ] Full team arrival confirmed via GC
 - [ ] Retrieve all equipment boxes from storage
@@ -321,6 +432,8 @@ Same volunteer as the setup AI Operator.
 
 ### 7:00 AM — Stream Systems Up
 
+**✅ Do this live**
+
 - [ ] **Captain**: toggle Restream ON; Favor Production = unlisted
 - [ ] Confirm AJA Helo is receiving signal (green link light; IP visible in ASUS admin panel)
 - [ ] Confirm Resi Encoder is online (`studio.resi.io`)
@@ -328,21 +441,31 @@ Same volunteer as the setup AI Operator.
 
 ### 7:30 AM — AJA Link Deadline
 
+**✅ Do this live**
+
+> 🚨 **Hard deadline**: AJA Restream link must be sent to STREAM ASSIST TEAM GC by 7:30 AM. Late delivery blocks the downstream STREAM ASSIST TEAM schedule.
+
 - [ ] **Captain**: send AJA Restream link to STREAM ASSIST TEAM GC
 - [ ] **Stream Comms**: confirm message sent; forward to other GCs as appropriate
 
 ### 8:45 AM — Runsheet Huddle
+
+**✅ Do this live**
 
 - [ ] Captain attends worship/production runsheet huddle
 - [ ] Asst Captain holds the floor
 
 ### 9:00 AM — All-In Huddle
 
+**✅ Do this live**
+
 - [ ] Full Internet Team gathers
 - [ ] Captain confirms: stream status, any issues to watch, role reminders
 - [ ] All volunteers confirm ready
 
 ### 9:00–9:45 AM — Final Checks
+
+**✅ Do this live**
 
 - [ ] **Runner/Speedtester**: test every mesh zone (≥80 Mbps on LAN-wired; WiFi OFF during test)
 - [ ] Speedtest results reported to Asst Captain via GC
@@ -352,9 +475,15 @@ Same volunteer as the setup AI Operator.
 
 ### 9:15 AM
 
+**✅ Do this live**
+
 - [ ] iWantTV stream live via Oven Media Engine
 
 ### 9:45 AM — Pre-Service Final
+
+**✅ Do this live**
+
+> 🚨 **Go-live window**: Favor Production YouTube link goes out now. Confirm visibility before sending: Favor Production = unlisted · Favor Church Manila = unlisted backup · iWantTV = public · Facebook = OFF.
 
 - [ ] **Captain**: send Favor Production YT link to STREAM ASSIST TEAM GC
 - [ ] Stream visibility confirmed: Favor Production = unlisted · Favor Church Manila = unlisted backup · iWantTV = public · Facebook = OFF
@@ -362,20 +491,30 @@ Same volunteer as the setup AI Operator.
 
 ### 9:48 AM
 
+**✅ Do this live**
+
 - [ ] Resi LIVE auto-trigger fires
 - [ ] **Stream Op**: confirm Resi stream visible in `studio.resi.io`
 
 ### 9:50 AM
+
+**✅ Do this live**
 
 - [ ] Resi should be live (accounting for 2–5 min buffer delay)
 - [ ] **Stream Op**: confirm YouTube Production shows live stream
 
 ### 9:55 AM — Contingency Window
 
+**✅ Do this live**
+
+> 🚨 **Critical**: If Resi is NOT live by 9:55 AM, Captain triggers AJA Backup Streams immediately. Stream Comms alerts all 4 GCs. Do not wait past 9:55.
+
 - [ ] **IF Resi NOT live**: Captain triggers AJA Backup Streams immediately
 - [ ] **Stream Comms**: alert all 4 GCs
 
 ### 10:00 AM — Service Starts
+
+**✅ Do this live**
 
 - [ ] All positions held; Stream Op monitoring; Troubleshooting on standby
 
@@ -400,6 +539,8 @@ See full schedule in [§3](#3-schedule). Key toggle moments:
 | ~12:00 NN | Resi OFF + Restream OFF | Captain |
 
 ### Stream Destinations Matrix
+
+**📖 Reference only**
 
 | Destination | Path | Visibility | Default State | Notes |
 |---|---|---|---|---|
@@ -480,6 +621,8 @@ AI Translations (SPF.IO) at MC2
 
 ### Post-Service (~6:00 PM)
 
+**✅ Do this live**
+
 **Step 1 — Captain confirms streams OFF**
 - Resi encoder: manual trigger OFF in `studio.resi.io`
 - Restream: toggle OFF all channels in `app.restream.io`
@@ -532,68 +675,83 @@ When in doubt: restart the device, wait 60 seconds, re-test. Most issues are phy
 
 ### Playbook A — Starlink Down
 
-**Symptoms:** No internet on FVR MAIN; speedtest = 0; Starlink app shows error.
+**Symptom:** No internet on FVR MAIN; speedtest = 0; Starlink app shows error.
 
+**Likely cause:** Starlink dish outage, physical cable fault, or weather obstruction.
+
+**First 60 seconds:**
 1. Check Starlink app (`net@favor.church` / [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0)) — is there an outage notice?
 2. Check physical cable from Starlink dish to ASUS ROG Rapture WAN port — any damage or loose connection?
 3. Power cycle Starlink (unplug, wait 30 s, replug); wait 2 min for reconnect
 4. Re-run speedtest — is it recovering?
-5. If still down: fail over to PLDT JIREH (FVR JIREH — already feeds Rapture as WAN 2; confirm it's active in ASUS admin panel `10.6.33.1`)
-6. Re-run speedtest; confirm ≥80 Mbps on failover
-7. Alert Captain; document in post-service debrief
+
+**Escalate when:** Starlink does not recover after one power cycle.
+
+**Captain action:** Fail over to PLDT JIREH (FVR JIREH — already feeds Rapture as WAN 2; confirm it's active in ASUS admin panel `10.6.33.1`). Re-run speedtest; confirm ≥80 Mbps on failover. Document in post-service debrief.
 
 ---
 
 ### Playbook B — Resi / AJA Not Streaming
 
-**Symptoms:** YouTube Production not live after 9:50 AM; Resi dashboard shows no signal.
+**Symptom:** YouTube Production not live after 9:50 AM; Resi dashboard shows no signal.
 
-**Check Resi Encoder:**
-1. Access `studio.resi.io` (`tech@favor.church` / [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0))
+**Likely cause:** Resi Encoder lost connection to FVR RESI router, or PLDT RESI link is down.
+
+**First 60 seconds:**
+1. Access `studio.resi.io` (`tech@favor.church` / [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0)) — check encoder status
 2. Confirm encoder status = "Connected"
-3. Check PLDT RESI router (10.2.1.1) — is it online? The Resi Encoder connects via FVR RESI, not the main switch
-4. If unreachable: check Ethernet cable from PLDT RESI router to encoder; confirm the cable is seated and the router's LAN port has a green link light
-6. Power cycle Resi encoder; wait 90 s; re-check
+3. Check PLDT RESI router (`10.2.1.1`) — is it online? The Resi Encoder connects via FVR RESI, not the main switch
+4. If unreachable: check Ethernet cable from PLDT RESI router to encoder; confirm cable is seated and router LAN port has a green link light
+5. Power cycle Resi encoder; wait 90 s; re-check
+6. Ping AJA from a laptop on FVR MAIN: `ping 10.6.33.5`; confirm Restream receiving signal at `app.restream.io`
 
-**If Resi cannot recover within 5 min:**
-7. Captain triggers AJA Backup Streams in Restream dashboard
-8. Stream Comms notifies all 4 GCs immediately
+**Escalate when:** Resi cannot be confirmed "Connected" within 5 minutes of first check.
 
-**Check AJA Helo:**
-1. Ping AJA from a laptop on FVR MAIN: `ping 10.6.33.5`
-2. Confirm Restream is receiving signal: `app.restream.io` → AJA Helo source status
-3. If AJA not connecting: power cycle AJA Helo; wait 60 s; confirm Restream receives signal
+**Captain action:** Trigger AJA Backup Streams in Restream dashboard. If AJA not connecting: power cycle AJA Helo; wait 60 s; confirm Restream receives signal. Stream Comms notifies all 4 GCs immediately.
 
 ---
 
 ### Playbook C — Mesh Offline / Slow Zone
 
-**Symptoms:** One area reports no WiFi or speed < 80 Mbps at that position.
+**Symptom:** One area reports no WiFi or speed < 80 Mbps at that position.
 
+**Likely cause:** X50 node lost wired Ethernet backhaul or has dropped offline.
+
+**First 60 seconds:**
 1. Identify which X50 node serves the area (see [§10 Venue Diagrams](#10-venue-diagrams))
 2. Check node LED: solid blue = good; red/amber/off = problem
-3. In TP-Link Deco app (`net@favor.church` / [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0)): check node status — does it show as Ethernet-wired or wireless backhaul?
+3. In TP-Link Deco app (`net@favor.church` / [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0)): check node status — does it show Ethernet-wired or wireless backhaul?
 4. If wireless backhaul instead of Ethernet: check the Ethernet cable to that node; reseat if loose
 5. If node is offline: power cycle it; wait 2 min for reconnect; re-check Deco app
 6. Re-run speedtest at that position
-7. If issue persists: move the node to a closer position and re-test; alert Asst Captain
+
+**Escalate when:** Issue persists after one power cycle and Ethernet cable reseat.
+
+**Captain action:** Authorize node relocation to a closer position; alert Asst Captain to redistribute coverage.
 
 ---
 
 ### Playbook D — Slow Speedtest (<80 Mbps)
 
-**Symptoms:** fast.com shows < 80 Mbps during pre-service check or live service.
+**Symptom:** fast.com shows < 80 Mbps during pre-service check or live service.
 
+**Likely cause:** WiFi test interference, CRTVS upload consuming bandwidth, or Starlink congestion.
+
+**First 60 seconds:**
 1. Confirm test is LAN-wired (not WiFi) — WiFi must be OFF on test device
 2. Check if large uploads are running (CRTVS upload, Resi upload) — ask CRTVS to pause during critical pre-service window if possible
 3. Check Starlink app for congestion or throttling notice
-4. Check ASUS admin panel (10.6.33.1) for unusual client count or bandwidth hog
-5. If LAN speed cannot be recovered: confirm streaming devices can failover to PLDT JIREH (WAN 2 already active on ASUS) or standalone 5G backup SSIDs
-6. Alert Captain with measured speed and which connection is currently in use
+4. Check ASUS admin panel (`10.6.33.1`) for unusual client count or bandwidth hog
+
+**Escalate when:** LAN speed cannot reach ≥80 Mbps after uploads are paused and Starlink shows no congestion.
+
+**Captain action:** Confirm streaming devices can failover to PLDT JIREH (WAN 2 already active on ASUS) or standalone 5G backup SSIDs. Alert Captain with measured speed and which connection is currently in use.
 
 ---
 
 ## 9. Equipment
+
+**📖 Reference only**
 
 > Organized by storage box for audit-friendly packdown. Count items during Tetris Master's inventory pass.
 
@@ -645,6 +803,8 @@ When in doubt: restart the device, wait 60 seconds, re-test. Most issues are phy
 ---
 
 ## 10. Venue Diagrams
+
+**📖 Reference only**
 
 ### Ynares Sports Arena (v6-2026-03-03)
 
@@ -729,6 +889,8 @@ Deprecated floor plans are in [`Internet Schematic/floor-plans/archive/`](Intern
 ---
 
 ## 11. Credentials
+
+**📖 Reference only**
 
 > **Active as of 2026-05-24.** Passwords rotate periodically. When a rotation happens, the Captain shares updated credentials with relevant staff and volunteers. Update this file and add a line to the version history when you receive a rotation notice.
 
