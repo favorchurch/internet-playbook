@@ -1,3 +1,9 @@
+/**
+ * @fileoverview Main generator script for Favor Manila Internet Team SOP slide deck.
+ * Programmatically constructs a standard 4:3 presentation using pptxgenjs.
+ * 
+ * Run with: node generate.js
+ */
 import pptxgen from "pptxgenjs";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -8,7 +14,11 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const pptx = new pptxgen();
 pptx.layout = "LAYOUT_4x3"; // Set Standard 4:3 aspect ratio (10" x 7.5")
 
-// Design Tokens (Light Mode Theme)
+/**
+ * Design Tokens (Light Mode Theme)
+ * Centralizes styling and branding colors used throughout the slide layouts.
+ * Matches standard color branding for Favor Church networks, alerts, and content sections.
+ */
 const COLORS = {
   bg: "FAFAFA",
   cardBg: "FFFFFF",
@@ -25,11 +35,22 @@ const COLORS = {
 };
 
 // Helper: Create Standard Background
+/**
+ * Sets the background color of the slide.
+ * @param {object} slide - The pptxgen slide object.
+ * @param {boolean} [isDivider=false] - Whether the slide is a section divider.
+ */
 function setSlideBackground(slide, isDivider = false) {
   slide.background = { fill: isDivider ? COLORS.bg : COLORS.white };
 }
 
 // Helper: Add Title
+/**
+ * Adds a title block and optional category header to the slide.
+ * @param {object} slide - The pptxgen slide object.
+ * @param {string} text - The title text.
+ * @param {string} [category=""] - Optional module category text.
+ */
 function addSlideTitle(slide, text, category = "") {
   if (category) {
     slide.addText(category.toUpperCase(), {
@@ -57,6 +78,15 @@ function addSlideTitle(slide, text, category = "") {
 }
 
 // Helper: Draw Card
+/**
+ * Draws a rounded rectangle card on the slide with themed background and border colors.
+ * @param {object} slide - The pptxgen slide object.
+ * @param {number} x - The x-coordinate in inches.
+ * @param {number} y - The y-coordinate in inches.
+ * @param {number} w - The width in inches.
+ * @param {number} h - The height in inches.
+ * @param {string} [fillType="normal"] - The card theme type ("normal", "blue", "red", "orange").
+ */
 function addCard(slide, x, y, w, h, fillType = "normal") {
   let fill = COLORS.cardBg;
   let lineColor = COLORS.cardLine;
@@ -80,6 +110,22 @@ function addCard(slide, x, y, w, h, fillType = "normal") {
 }
 
 // Helper: Add Bullet List
+/**
+ * Adds a list of bullet points with rich formatting options onto a slide.
+ * @param {object} slide - The pptxgen slide object.
+ * @param {Array<object>} items - Array of bullet items to add.
+ * @param {string} items[].text - Text content of the bullet point.
+ * @param {boolean} [items[].bullet] - Whether to show the bullet symbol.
+ * @param {boolean} [items[].bold] - Bold text style.
+ * @param {string} [items[].color] - Hex color of the text.
+ * @param {number} [items[].fontSize] - Text font size.
+ * @param {string} [items[].fontFace] - Font face (e.g. "Inter").
+ * @param {number} [items[].indent] - Bullet indentation level.
+ * @param {number} x - The x-coordinate in inches.
+ * @param {number} y - The y-coordinate in inches.
+ * @param {number} w - The width in inches.
+ * @param {number} h - The height in inches.
+ */
 function addBulletList(slide, items, x, y, w, h) {
   let textObjects = [];
   items.forEach((item, index) => {
@@ -100,6 +146,16 @@ function addBulletList(slide, items, x, y, w, h) {
 }
 
 // Helper: Add Card Header
+/**
+ * Adds a header text block for cards on the slide.
+ * @param {object} slide - The pptxgen slide object.
+ * @param {string} text - Header text.
+ * @param {number} x - The x-coordinate in inches.
+ * @param {number} y - The y-coordinate in inches.
+ * @param {number} w - The width in inches.
+ * @param {number} [h=0.4] - The height in inches.
+ * @param {boolean} [isAlert=false] - Whether to render with alert styling (red).
+ */
 function addCardHeader(slide, text, x, y, w, h = 0.4, isAlert = false) {
   slide.addText(text.toUpperCase(), {
     x, y, w, h,
@@ -111,6 +167,13 @@ function addCardHeader(slide, text, x, y, w, h = 0.4, isAlert = false) {
 }
 
 // Helper: Add Section Divider Slide
+/**
+ * Creates and appends a module section divider slide to the presentation.
+ * @param {object} pptx - The main presentation object.
+ * @param {string} moduleTitle - The main module title text.
+ * @param {string} subtitle - Subtitle describing section coverage.
+ * @returns {object} The created slide object.
+ */
 function addSectionDivider(pptx, moduleTitle, subtitle) {
   let slide = pptx.addSlide();
   setSlideBackground(slide, true);
@@ -157,6 +220,13 @@ function addSectionDivider(pptx, moduleTitle, subtitle) {
 
 // Slide 1: Title Slide
 {
+  /**
+   * Slide 1: Cover Title Slide
+   * Features:
+   * - Off-white background (true = COLORS.bg)
+   * - Vertical primary blue line on the left side
+   * - High-contrast title and version info set to Outfit and Inter fonts respectively
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide, true);
   
@@ -189,6 +259,12 @@ function addSectionDivider(pptx, moduleTitle, subtitle) {
 
 // Slide 2: Welcome & Our Vision
 {
+  /**
+   * Slide 2: Welcome & Our Vision
+   * Features:
+   * - Left side: 1 vertical full-height colored card containing the team's core mission statement
+   * - Right side: 3 stacked cards summarizing key volunteer focus areas
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "Welcome & Our Vision", "Module 1");
@@ -218,6 +294,12 @@ function addSectionDivider(pptx, moduleTitle, subtitle) {
 
 // Slide 3: Onboarding Pipeline
 {
+  /**
+   * Slide 3: Volunteer Onboarding Pipeline
+   * Features:
+   * - 2x2 grid representing the four stages of volunteer progression
+   * - Active roster step highlighted using the primary blue fill option
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "The Volunteer Onboarding Pipeline", "Module 1");
@@ -260,6 +342,12 @@ function addSectionDivider(pptx, moduleTitle, subtitle) {
 
 // Slide 4: Roster Rules of Engagement
 {
+  /**
+   * Slide 4: Roster Guidelines & Culture
+   * Features:
+   * - 2x2 grid containing the primary expectations for roster commitments
+   * - Punctuality block highlighted with red alert color matching critical nature
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "Roster Rules of Engagement", "Module 1");
@@ -302,6 +390,12 @@ function addSectionDivider(pptx, moduleTitle, subtitle) {
 
 // Slide 5: First-Sunday Checklist
 {
+  /**
+   * Slide 5: Checklist for New Members
+   * Features:
+   * - Left: large blue highlight block emphasizing call time
+   * - Right: checklist card detailing priority action items for day 1
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "Your First Sunday Checklist", "Module 1");
@@ -334,6 +428,12 @@ addSectionDivider(pptx, "Module 2: Team Roles & Duties", "Setup Roles (9) and Pa
 
 // Slide 6: Role Overview
 {
+  /**
+   * Slide 6: Setup vs. Packdown Roles Overview
+   * Features:
+   * - Left: Setup roles list (9 positions) detailing operational duties
+   * - Right: Packdown roles list (6 positions) detailing audit/packing duties, using blue theme
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "Setup vs. Packdown Roles", "Module 2");
@@ -370,6 +470,12 @@ addSectionDivider(pptx, "Module 2: Team Roles & Duties", "Setup Roles (9) and Pa
 
 // Slide 7: Command Center Roles
 {
+  /**
+   * Slide 7: Command Center (Captain & Asst Captain)
+   * Features:
+   * - Left: Captain role, timeline actions, stream console operations
+   * - Right: Assistant Captain role, floor coverage, diagnostics, mesh deployment
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "Command Center: Captain & Asst Captain", "Module 2");
@@ -404,6 +510,12 @@ addSectionDivider(pptx, "Module 2: Team Roles & Duties", "Setup Roles (9) and Pa
 
 // Slide 8: Monitoring & Comms Roles
 {
+  /**
+   * Slide 8: Console Roles (Stream Op & Stream Comms)
+   * Features:
+   * - Left: Stream Op monitoring responsibilities (Resi, Restream, Youtube, translations)
+   * - Right: Stream Comms Viber coordination details across 4 channels
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "Broadcast Console: Stream Op & Stream Comms", "Module 2");
@@ -439,6 +551,12 @@ addSectionDivider(pptx, "Module 2: Team Roles & Duties", "Setup Roles (9) and Pa
 
 // Slide 9: Technical Troubleshooting & Logistics
 {
+  /**
+   * Slide 9: Support Roles (Troubleshooting & Runner)
+   * Features:
+   * - Left: Network troubleshooting diagnostics and the 5-minute escalation rule
+   * - Right: Runner logistics checklist, including strict LAN-only speedtest rules (>=80 Mbps)
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "Technical Support: Troubleshooting & Runner", "Module 2");
@@ -476,6 +594,12 @@ addSectionDivider(pptx, "Module 2: Team Roles & Duties", "Setup Roles (9) and Pa
 
 // Slide 10: Physical & AI Setup Roles
 {
+  /**
+   * Slide 10: Infrastructure Roles (Cable, CCTV, AI Operator)
+   * Features:
+   * - Column 1 (Left): Cable Hands and CCTV setups stacked
+   * - Column 2 (Right): AI Operator translating procedures with SPF.IO, using blue theme
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "Infrastructure: Cables, CCTV, & AI Operator", "Module 2");
@@ -518,6 +642,12 @@ addSectionDivider(pptx, "Module 2: Team Roles & Duties", "Setup Roles (9) and Pa
 
 // Slide 11: Packdown Roles
 {
+  /**
+   * Slide 11: Post-Service Packdown & Audits
+   * Features:
+   * - Left Stack: Captain/Cables packdown, AI/CCTV packdown, and critical CRTVS delay rule in red
+   * - Right (Blue): Tetris Master inventory audit duties
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "Post-Service Packdown & Audits", "Module 2");
@@ -566,6 +696,12 @@ addSectionDivider(pptx, "Module 3: Schedules & Playbooks", "Sunday Timeline and 
 
 // Slide 12: Morning Service Timeline (10 AM)
 {
+  /**
+   * Slide 12: Sunday Morning Timeline (10 AM)
+   * Features:
+   * - Renders a large table containing chronological milestones of the morning service
+   * - Key trigger times (7:00 AM, 9:45 AM, 9:55 AM) are highlighted using accent colors
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "Sunday Morning Timeline (10 AM)", "Module 3");
@@ -606,6 +742,12 @@ addSectionDivider(pptx, "Module 3: Schedules & Playbooks", "Sunday Timeline and 
 
 // Slide 13: Setup Playbook: 6:00 AM – 7:30 AM
 {
+  /**
+   * Slide 13: Early Morning Playbook (6:00 – 7:30 AM)
+   * Features:
+   * - Left: Physical deployment list (cables, mesh nodes, Tapo cameras, M-Audio)
+   * - Right (Blue): Stream systems activation and verification timeline
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "Early Morning Playbook (6:00 – 7:30 AM)", "Module 3");
@@ -643,6 +785,13 @@ addSectionDivider(pptx, "Module 3: Schedules & Playbooks", "Sunday Timeline and 
 
 // Slide 14: Setup Playbook: 8:45 AM – 9:15 AM
 {
+  /**
+   * Slide 14: Huddles & Network Validation (8:45 – 9:15 AM)
+   * Features:
+   * - Top: Wide card covering the production runsheet huddle and team all-in huddle
+   * - Bottom Left: Card detailing wired backhaul verification rules
+   * - Bottom Right (Blue): Speedtester validation tasks with strict LAN limits
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "Mid-Morning Playbook (8:45 – 9:15 AM)", "Module 3");
@@ -682,6 +831,12 @@ addSectionDivider(pptx, "Module 3: Schedules & Playbooks", "Sunday Timeline and 
 
 // Slide 15: Setup Playbook: 9:45 AM – 10:00 AM
 {
+  /**
+   * Slide 15: Critical Live Go-Live Window (9:45 – 10:00 AM)
+   * Features:
+   * - Four stacked horizontal timeline segments representing sequential milestones
+   * - The 9:55 AM segment is marked with a red alert to emphasize contingency failovers
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "Live Go-Live Window (9:45 – 10:00 AM)", "Module 3");
@@ -721,6 +876,12 @@ addSectionDivider(pptx, "Module 3: Schedules & Playbooks", "Sunday Timeline and 
 
 // Slide 16: Afternoon Service Playbook (4 PM)
 {
+  /**
+   * Slide 16: Afternoon Service Playbook (4 PM)
+   * Features:
+   * - Left: Afternoon timeline starting with Captain's solo setup at 1:30 PM
+   * - Right (Blue): Structural differences compared to the morning setup (hardware stays live)
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "Afternoon Service Playbook (4 PM)", "Module 3");
@@ -766,6 +927,12 @@ addSectionDivider(pptx, "Module 4: Signal Chain & Matrix", "Stream Destinations,
 
 // Slide 17: Stream Destinations Matrix
 {
+  /**
+   * Slide 17: Stream Destinations & Latency Matrix
+   * Features:
+   * - Custom table layout displaying default states and visibilities for all stream destinations
+   * - Uses small fonts (9pt) to prevent truncation of columns on Standard 4:3 canvas
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "Stream Destinations Matrix", "Module 4");
@@ -805,6 +972,13 @@ addSectionDivider(pptx, "Module 4: Signal Chain & Matrix", "Stream Destinations,
 
 // Slide 18: Stream Signal Flow Diagram
 {
+  /**
+   * Slide 18: Stream Signal Chain Flow
+   * Features:
+   * - Top: Center switcher block serving as the primary source of video feed
+   * - Bottom Left: Isolated Resi streaming path card
+   * - Bottom Right: Multi-destination AJA/Restream path card
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "Stream Signal Chain Flow", "Module 4");
@@ -845,6 +1019,12 @@ addSectionDivider(pptx, "Module 4: Signal Chain & Matrix", "Stream Destinations,
 
 // Slide 19: Stream Toggle Sequence
 {
+  /**
+   * Slide 19: Stream Control Toggle Sequence
+   * Features:
+   * - A chronological schedule table detailing all manual and automatic stream triggers
+   * - High-contrast styling highlighting critical trigger times
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "Stream Control Toggle Sequence", "Module 4");
@@ -885,6 +1065,12 @@ addSectionDivider(pptx, "Module 4: Signal Chain & Matrix", "Stream Destinations,
 
 // Slide 20: YouTube Stream Metadata
 {
+  /**
+   * Slide 20: YouTube Stream Metadata Setup
+   * Features:
+   * - Left: Metadata title, category, and privacy defaults
+   * - Right (Blue): Copy-paste box containing description text formatted in Courier New font
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "YouTube Stream Metadata Setup", "Module 4");
@@ -939,6 +1125,12 @@ addSectionDivider(pptx, "Module 5: Packdown & Storage", "Post-Service Sequence, 
 
 // Slide 21: Post-Service Packdown Sequence
 {
+  /**
+   * Slide 21: Post-Service Packdown Sequence
+   * Features:
+   * - Vertical stacked numbered sequence describing steps to terminate streams, hold debrief huddles
+   * - Highlighted red card details critical rules concerning post-service CRTVS upload delays
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "Post-Service Packdown Sequence", "Module 5");
@@ -977,6 +1169,12 @@ addSectionDivider(pptx, "Module 5: Packdown & Storage", "Post-Service Sequence, 
 
 // Slide 22: Equipment Audit — Box 1 & Box 2
 {
+  /**
+   * Slide 22: Equipment Audit (Box 1 & Box 2)
+   * Features:
+   * - Left: Table detailing Box 1 (Cables) quantities and destinations
+   * - Right (Blue): Table detailing Box 2 (Networking) hardware components
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "Equipment Audit: Box 1 & Box 2", "Module 5");
@@ -1025,6 +1223,13 @@ addSectionDivider(pptx, "Module 5: Packdown & Storage", "Post-Service Sequence, 
 
 // Slide 23: Equipment Audit — Box 3, AI & Tools
 {
+  /**
+   * Slide 23: Equipment Audit (Box 3, AI Gear, Tools)
+   * Features:
+   * - Left: Card detailing Box 3 (Streaming Gear) specifications and tapo settings
+   * - Right Top (Blue): AI translations gear list (M-Audio, printer cable)
+   * - Right Bottom: Troubleshooting laptop and comms phone tools list
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "Equipment Audit: Box 3, AI, & Tools", "Module 5");
@@ -1071,6 +1276,12 @@ addSectionDivider(pptx, "Module 6: Venues & Credentials", "Ynares Arena & Metrot
 
 // Slide 24: Ynares Sports Arena Layout
 {
+  /**
+   * Slide 24: Ynares Sports Arena Network Layout
+   * Features:
+   * - Left: Dual-WAN failover description, mesh nodes list, and dedicated stream path
+   * - Right (Blue): Image placeholder card for floor plans and topologies
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "Ynares Sports Arena Layout (v6)", "Module 6");
@@ -1109,6 +1320,12 @@ addSectionDivider(pptx, "Module 6: Venues & Credentials", "Ynares Arena & Metrot
 
 // Slide 25: Metrotent Layout
 {
+  /**
+   * Slide 25: Metrotent Venue Layout
+   * Features:
+   * - Left: WAN configuration rules, switch setups, and mesh node placements (Babies, VIP/CRTVS)
+   * - Right (Blue): Image placeholder card for floor plans and topologies
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "Metrotent Venue Layout", "Module 6");
@@ -1145,6 +1362,13 @@ addSectionDivider(pptx, "Module 6: Venues & Credentials", "Ynares Arena & Metrot
 
 // Slide 26: Credentials & Security
 {
+  /**
+   * Slide 26: Credentials & Security Policy
+   * Features:
+   * - Layout uses red border theme to denote security-critical policy warning
+   * - Large center warning text pointing users to authoritative password sheets (no hardcoded passwords)
+   * - Bottom table summarizing SSIDs and Router IPs
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "Credentials & Security Policy", "Module 6");
@@ -1192,6 +1416,13 @@ addSectionDivider(pptx, "Module 7: Troubleshooting Playbooks", "Core Diagnostic 
 
 // Slide 27: Troubleshooting Core Principles
 {
+  /**
+   * Slide 27: Troubleshooting Core Principles
+   * Features:
+   * - Horizontal flow chart representing bottom-up diagnostic sequence
+   * - Arrows connecting: Power -> Physical -> IP Reach -> Platform -> Content
+   * - Lower card detailing the 60-second rule, local subnet, and 5-minute escalation limit
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "Troubleshooting Principles", "Module 7");
@@ -1245,6 +1476,12 @@ addSectionDivider(pptx, "Module 7: Troubleshooting Playbooks", "Core Diagnostic 
 
 // Slide 28: Playbook A: Starlink Down
 {
+  /**
+   * Slide 28: Playbook A (Starlink Outage & Failover)
+   * Features:
+   * - Left: Symptoms card styled in red alert border
+   * - Right: Step-by-step failover execution playbook
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "Playbook A: Starlink Outage Failover", "Module 7");
@@ -1281,6 +1518,12 @@ addSectionDivider(pptx, "Module 7: Troubleshooting Playbooks", "Core Diagnostic 
 
 // Slide 29: Playbook B: Resi / AJA Not Streaming
 {
+  /**
+   * Slide 29: Playbook B (Encoder Failures)
+   * Features:
+   * - Left: Resi hardware and dashboard checklist steps, including the 9:55 AM contingency gate
+   * - Right: AJA Helo encoder checks (pings, Restream checks)
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "Playbook B: Encoder Streaming Failures", "Module 7");
@@ -1323,6 +1566,12 @@ addSectionDivider(pptx, "Module 7: Troubleshooting Playbooks", "Core Diagnostic 
 
 // Slide 30: Playbooks C & D: Mesh & Slow Speeds
 {
+  /**
+   * Slide 30: Playbooks C & D (Mesh Nodes & Slow Speeds)
+   * Features:
+   * - Left: Playbook C for checking wireless backhaul status and Deco node LEDs (solid blue)
+   * - Right: Playbook D for managing LAN speed issues, congestion checks, and pausing uploads
+   */
   let slide = pptx.addSlide();
   setSlideBackground(slide);
   addSlideTitle(slide, "Playbooks C & D: Mesh & Slow Speeds", "Module 7");

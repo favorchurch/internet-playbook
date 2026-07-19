@@ -1,6 +1,6 @@
 # Internet Schematic — Reference Assets
 
-This folder contains all visual and reference assets extracted from the original Internet Schematic Google Slides deck (`1uGVDMJ8plObs9qfFBCXS6T3lSvJkxe-YSK6cTVcoZII`), now deprecated in favor of `INTERNET_MASTERFILE.md`.
+This folder contains all visual and reference assets extracted from the original Internet Schematic Google Slides deck (`1uGVDMJ8plObs9qfFBCXS6T3lSvJkxe-YSK6cTVcoZII`), now deprecated in favor of parent [README.md](../README.md).
 
 ---
 
@@ -104,7 +104,7 @@ Additional timing from the stream diagram slide:
 
 ### Slide 7: WiFi Access
 
-Original WiFi credential table from the slides (now **superseded** by the reconciled credentials in `INTERNET_MASTERFILE.md §11`):
+Original WiFi credential table from the slides (now **superseded** by the reconciled credentials in parent [README.md](../README.md#11-credentials)):
 
 | SSID | Password (slides) | Status |
 |---|---|---|
@@ -115,13 +115,13 @@ Original WiFi credential table from the slides (now **superseded** by the reconc
 | FVR STAFF | [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0) | **DEPRECATED** |
 | FVR CCTV | [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0) | Correct |
 
-**Do not use this table for operations.** Use `INTERNET_MASTERFILE.md §11` (Credentials) instead.
+**Do not use this table for operations.** Use parent [README.md](../README.md#11-credentials) instead.
 
 ---
 
 ### Slide 8: Stream Access
 
-Placeholder slide listing Restream and Resi login points. Credentials were not shown (redacted). Full authoritative credentials are in `INTERNET_MASTERFILE.md §11`.
+Placeholder slide listing Restream and Resi login points. Credentials were not shown (redacted). Full authoritative credentials are in parent [README.md](../README.md#11-credentials).
 
 ---
 
@@ -217,7 +217,7 @@ Slide 13 is a section divider ("OLD LAYOUTS"). Slides 14–26 are deprecated flo
 
 ## Migration Notes
 
-This folder was created on 2026-05-24 as part of the Internet SOP migration. The original Google Slides deck and Passwords Sheet are now **deprecated** as live operational documents. All current credentials and procedures are maintained in [`../INTERNET_MASTERFILE.md`](../INTERNET_MASTERFILE.md).
+This folder was created on 2026-05-24 as part of the Internet SOP migration. The original Google Slides deck and Passwords Sheet are now **deprecated** as live operational documents. All current credentials and procedures are maintained in parent [README.md](../README.md).
 
 The original sources are preserved for historical reference:
 - Google Slides: `1uGVDMJ8plObs9qfFBCXS6T3lSvJkxe-YSK6cTVcoZII`

@@ -1,27 +1,103 @@
-# Favor Manila Internet Team — Master SOP
+# Favor Manila Internet Playbook & Master SOP
 
 > **Single source of truth** as of 2026-05-24.  
-> Passwords: [Google Sheet]((https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0))  
+> Passwords: [Google Sheet](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0)  
 > Roster: [favor.church/techroster](https://favor.church/techroster) · Reference assets: [`Internet Schematic/`](Internet%20Schematic/)
+
+---
+
+## Developer Documentation
+
+### 1. What It Is
+This repository contains the operational playbooks, diagrams, and assets for the **Favor Manila Internet Team**. It serves two purposes:
+1. It is the **Master SOP** (Standard Operating Procedure) for Sunday volunteers and network captains running physical venue networks and live broadcasts.
+2. It contains a **slide-generator script** to programmatically compile these operational guidelines into structured training slides (`Favor_Manila_Internet_Team_SOP.pptx`).
+
+### 2. Tech Stack
+The code and assets in this repository utilize:
+*   **JavaScript (ES Modules)**: Node.js scripts for slide generation.
+*   **pptxgenjs (v3.12.0)**: Programmatic PowerPoint generation library.
+*   **SVG / PNG**: Network diagrams and floor layouts.
+*   **Services Documented**:
+    *   **Resi** (`studio.resi.io`): High-reliability broadcast streaming.
+    *   **AJA Helo**: Hardware streaming encoder.
+    *   **Restream** (`app.restream.io`): Multi-destination live streaming hub.
+    *   **SPF.IO**: AI-powered real-time translation subtitles.
+    *   **Tapo App**: CCTV monitoring system.
+    *   **Starlink Standard / PLDT 5G Jireh / PLDT 5G Resi**: WAN inputs.
+
+### 3. Architecture & Directory Map
+*   [README.md](file:///Users/rico/Git/_docs-pass/clones/internet-playbook/README.md): Master SOP containing all timelines, roles, credentials, and playbooks.
+*   [AGENTS.md](file:///Users/rico/Git/_docs-pass/clones/internet-playbook/AGENTS.md): Workspace instructions for automated agents and developers.
+*   [Internet Schematic/](file:///Users/rico/Git/_docs-pass/clones/internet-playbook/Internet%20Schematic/): Subfolder for visual assets.
+    *   [README.md](file:///Users/rico/Git/_docs-pass/clones/internet-playbook/Internet%20Schematic/README.md): Folder index and annotated slide breakdowns.
+    *   [AGENTS.md](file:///Users/rico/Git/_docs-pass/clones/internet-playbook/Internet%20Schematic/AGENTS.md): Guidelines specific to schematic folder updates.
+    *   [google-slides-sop-storyboard.md](file:///Users/rico/Git/_docs-pass/clones/internet-playbook/Internet%20Schematic/google-slides-sop-storyboard.md): Text script and layout instructions for the SOP presentation.
+    *   [floor-plans/](file:///Users/rico/Git/_docs-pass/clones/internet-playbook/Internet%20Schematic/floor-plans/): Current and archived PNG venue layout floor plans.
+    *   [diagrams/](file:///Users/rico/Git/_docs-pass/clones/internet-playbook/Internet%20Schematic/diagrams/): SVG topologies and stream diagrams.
+    *   [slide-generator/](file:///Users/rico/Git/_docs-pass/clones/internet-playbook/Internet%20Schematic/slide-generator/):
+        *   [generate.js](file:///Users/rico/Git/_docs-pass/clones/internet-playbook/Internet%20Schematic/slide-generator/generate.js): Generator script utilizing `pptxgenjs` to write the training presentation.
+        *   [package.json](file:///Users/rico/Git/_docs-pass/clones/internet-playbook/Internet%20Schematic/slide-generator/package.json): Node dependency manifest.
+
+### 4. Local Setup
+To run the slide generator locally:
+1.  **Prerequisites**: Install Node.js (v18+) and `pnpm`.
+2.  Navigate to the generator subdirectory:
+    ```bash
+    cd "Internet Schematic/slide-generator"
+    ```
+3.  Install dependencies:
+    ```bash
+    pnpm install
+    ```
+4.  Run the slide generation script:
+    ```bash
+    node generate.js
+    ```
+
+### 5. Configuration
+The slide generator runs without external environment variables or configuration files. All design tokens, module content, and structure are defined statically as constants inside [generate.js](file:///Users/rico/Git/_docs-pass/clones/internet-playbook/Internet%20Schematic/slide-generator/generate.js).
+*   **Design Tokens**: Colors (`bg`, `cardBg`, `blue`, etc.) conform to the team's visual identity.
+*   **External References**: Passwords and roster listings are dynamic and linked via references to the external Google Sheets rather than hardcoded.
+
+### 6. Testing / Validation
+To validate changes:
+*   There are no automated test suites.
+*   Confirm changes by running `node generate.js` and ensuring the file generates successfully.
+*   Verify output layout styling manually inside PowerPoint or Google Slides.
+
+### 7. Deployment
+The slide generator output `Favor_Manila_Internet_Team_SOP.pptx` is written to the configured output path. Deployed files should be shared with volunteers via Google Drive or the team repository.
+
+### 8. Contributing & Dev → Production Workflow
+*   **Branching Model**: Work on designated feature branches (e.g. `docs/inline-documentation`). Avoid committing directly to `main`.
+*   **Updates Policy**:
+    *   When changing physical credentials, update root [README.md §11](#11-credentials). Do not hardcode raw credentials in `generate.js`.
+    *   If venue layouts change, save the new PNG under [floor-plans/](file:///Users/rico/Git/_docs-pass/clones/internet-playbook/Internet%20Schematic/floor-plans/), register it in the [Internet Schematic/README.md](file:///Users/rico/Git/_docs-pass/clones/internet-playbook/Internet%20Schematic/README.md) file structure tree, and update the layout slides in [generate.js](file:///Users/rico/Git/_docs-pass/clones/internet-playbook/Internet%20Schematic/slide-generator/generate.js).
+    *   Verify the updated deck builds without errors before submitting pull requests.
 
 ---
 
 ## Table of Contents
 
-1. [Welcome](#1-welcome)
-2. [As a Volunteer](#2-as-a-volunteer)
-3. [Schedule](#3-schedule)
-4. [Roles](#4-roles)
-5. [Setup Playbook](#5-setup-playbook)
-6. [Stream Toggle Sequence](#6-stream-toggle-sequence)
-7. [Packdown Playbook](#7-packdown-playbook)
-8. [Troubleshooting](#8-troubleshooting)
-9. [Equipment](#9-equipment)
-10. [Venue Diagrams](#10-venue-diagrams)
-11. [Credentials](#11-credentials)
-12. [Appendix](#12-appendix)
+- [Developer Documentation](#developer-documentation)
+- [Operational Master SOP](#operational-master-sop)
+  1. [Welcome](#1-welcome)
+  2. [As a Volunteer](#2-as-a-volunteer)
+  3. [Schedule](#3-schedule)
+  4. [Roles](#4-roles)
+  5. [Setup Playbook](#5-setup-playbook)
+  6. [Stream Toggle Sequence](#6-stream-toggle-sequence)
+  7. [Packdown Playbook](#7-packdown-playbook)
+  8. [Troubleshooting](#8-troubleshooting)
+  9. [Equipment](#9-equipment)
+  10. [Venue Diagrams](#10-venue-diagrams)
+  11. [Credentials](#11-credentials)
+  12. [Appendix](#12-appendix)
 
 ---
+
+## Operational Master SOP
 
 ## 1. Welcome
 
