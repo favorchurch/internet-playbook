@@ -1,6 +1,6 @@
 # Favor Manila Internet Team — Master SOP
 
-> **Single source of truth** as of 2026-05-24.  
+> **Single source of truth** as of 2026-10-04.  
 > Passwords: [Google Sheet]((https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0))  
 > Roster: [favor.church/techroster](https://favor.church/techroster) · Reference assets: [`Internet Schematic/`](Internet%20Schematic/)
 
@@ -51,15 +51,15 @@ This document is the one place that has everything: roles, schedules, playbooks,
 2. **Contact response** — Respond to GC messages within 24 hours. Silence is not an answer.
 3. **Swaps** — Arrange swaps directly with another rostered volunteer. Inform the Captain once confirmed — don't leave them to find out on Sunday morning.
 4. **Escalation** — If you can't find a swap or need urgent cover, contact the Captain directly. Don't wait.
-5. **Attendance** — Be on time for call time (6:00 AM). Late arrival without notice is noted.
+5. **Attendance** — Be on time for your call time: Captain at 6:00 AM; all other volunteers at 6:15 AM. Late arrival without notice is noted.
 
 ### First-Sunday Checklist
 
 For new volunteers on their first rostered Sunday:
 
-- [ ] Arrive by 6:00 AM
+- [ ] Arrive by 6:15 AM
 - [ ] Find the Captain at setup or text them when you arrive
-- [ ] Listen closely at the 9:00 AM all-in huddle — the Captain walks through any changes
+- [ ] Listen closely at the 8:10 AM all-in huddle — the Captain walks through any changes
 - [ ] Follow your role's duty list in [§4](#4-roles)
 - [ ] Ask your buddy or the Captain if anything is unclear — no question is dumb on Day 1
 
@@ -67,37 +67,59 @@ For new volunteers on their first rostered Sunday:
 
 ## 3. Schedule
 
-### Morning Service (10 AM)
+### Sunday Services — Crowne Plaza Manila Galleria
+
+| Service | Stream visibility | Expected end |
+|---|---|---|
+| **9:00 AM** | **Unlisted** | ~10:30 AM |
+| **11:30 AM** | **PUBLIC — main livestream** | ~1:00 PM |
+| **3:00 PM** | **Unlisted** | ~4:30 PM |
+| **5:30 PM** | **Unlisted** | ~7:00 PM |
+
+> **Stream rule:** all four services are streamed. The **11:30 AM service is the public livestream**; 9:00 AM, 3:00 PM, and 5:30 PM remain unlisted.
+
+### Full Sunday Timeline
 
 | Time | Event |
 |---|---|
-| 6:00 AM | Team gather. Cable runs begin. Mesh nodes placed. Early setup huddle. |
-| 7:00 AM | **Captain**: toggle Restream ON. Favor Production = unlisted. |
+| 6:00 AM | **Captain call time.** Captain arrives and begins setup oversight. |
+| 6:15 AM | **Volunteer call time.** Full Internet Team arrives; cable runs, mesh placement, CCTV, and CaptionKit hardware setup begin. |
+| 7:00 AM | **Captain**: Restream systems ON. Favor Production remains unlisted for rehearsal / early-service testing. |
 | 7:07 AM | Resi TEST stream auto-trigger (2–5 min delay; 1-hr test duration — expected, not an error). |
-| 7:30 AM | **Deadline**: AJA Restream link sent to STREAM ASSIST TEAM GC. |
-| 8:45 AM | Captain at worship/production runsheet huddle. |
-| 9:00 AM | All-in huddle — full Internet Team. |
-| 9:15 AM | iWantTV stream live via Oven Media Engine. |
-| 9:45 AM | **Captain**: send Favor Production YT link to STREAM ASSIST TEAM GC. Visibility: Favor Production = unlisted · Favor Church Manila = unlisted backup · iWantTV = public · Facebook = OFF. |
-| 9:48 AM | Resi LIVE auto-trigger. |
-| 9:50 AM | Resi live with 2–5 min buffer delay. |
-| 9:55 AM | **IF RESI NOT LIVE** → Captain triggers AJA Backup Streams; Stream Comms alerts all 4 GCs. |
-| 10:00 AM | Morning service starts. |
-| ~10:30 AM | **Captain signal**: AI Operator triggers AI Translations ON (MC2 / SPF.IO). |
-| ~11:30 AM | **Captain signal**: AI Operator triggers AI Translations OFF (before ministry time). |
-| ~12:00 NN | Service ends. **Captain**: manual trigger OFF Resi encoder + Restream (all channels). |
-
-### Afternoon Service (4 PM — live, unlisted)
-
-| Time | Event |
-|---|---|
-| 1:30 PM | Captain solo arrival. Toggle Favor Production unlisted ON. Send link to STREAM ASSIST TEAM GC. Speedtest all areas (≥80 Mbps, LAN-wired, WiFi OFF). |
-| 2:45 PM | Captain at afternoon runsheet huddle. |
-| 3:00 PM | All-in huddle (afternoon team). |
-| 4:00 PM | Afternoon service starts. Resend stream link to STREAM ASSIST TEAM GC during pre-roll. |
-| ~4:30 PM | **Captain signal**: AI Operator triggers AI Translations ON. |
-| ~5:30 PM | **Captain signal**: AI Operator triggers AI Translations OFF. |
-| ~6:00 PM | Afternoon service ends. **Captain**: manual trigger OFF Resi encoder + Restream. |
+| 7:30 AM | **Deadline**: AJA rehearsal / preview link sent to STREAM ASSIST TEAM GC. |
+| 8:00 AM | Captain at worship/production runsheet huddle. |
+| 8:10 AM | **All-in huddle** — full Internet Team. |
+| 8:45 AM | 9:00 AM service pre-stream window begins — **unlisted**. |
+| 8:48 AM | Resi LIVE auto-trigger for 9:00 AM service. |
+| 8:50 AM | Resi expected live after buffer. |
+| 8:55 AM | **IF RESI NOT LIVE** → Captain triggers AJA Backup Streams; Stream Comms alerts all 4 GCs. |
+| 9:00 AM | First service starts — **unlisted**. Internet Team remains operational while morning rehearsal / stream testing continues. |
+| ~9:30 AM | **Captain signal**: AI Operator triggers CaptionKit translations ON. |
+| ~10:30 AM | CaptionKit translations OFF; first service ends. |
+| 10:45 AM | iWantTV / public-feed preparation for the 11:30 AM livestream. |
+| 11:15 AM | **Main livestream pre-stream window begins.** Favor Production / public destinations go live. |
+| 11:18 AM | Resi LIVE auto-trigger for 11:30 AM service. |
+| 11:20 AM | Resi expected live after buffer. |
+| 11:25 AM | **IF RESI NOT LIVE** → Captain triggers AJA Backup Streams; Stream Comms alerts all 4 GCs. |
+| 11:30 AM | Second service starts — **PUBLIC main livestream**. |
+| ~12:00 NN | **Captain signal**: AI Operator triggers CaptionKit translations ON. |
+| ~1:00 PM | CaptionKit translations OFF; second service ends. Return service-stream visibility to **unlisted** for the afternoon. |
+| 2:00 PM | Captain at afternoon worship/production runsheet huddle. |
+| 2:10 PM | **All-in huddle** — afternoon team. This is the only PM huddle. |
+| 2:45 PM | 3:00 PM service pre-stream window begins — **unlisted**. |
+| 2:48 PM | Resi LIVE auto-trigger for 3:00 PM service. |
+| 2:50 PM | Resi expected live after buffer. |
+| 2:55 PM | **IF RESI NOT LIVE** → Captain triggers AJA Backup Streams; Stream Comms alerts all 4 GCs. |
+| 3:00 PM | Third service starts — **unlisted**. |
+| ~3:30 PM | **Captain signal**: AI Operator triggers CaptionKit translations ON. |
+| ~4:30 PM | CaptionKit translations OFF; third service ends. |
+| 5:15 PM | 5:30 PM service pre-stream window begins — **unlisted**. |
+| 5:18 PM | Resi LIVE auto-trigger for 5:30 PM service. |
+| 5:20 PM | Resi expected live after buffer. |
+| 5:25 PM | **IF RESI NOT LIVE** → Captain triggers AJA Backup Streams; Stream Comms alerts all 4 GCs. |
+| 5:30 PM | Fourth service starts — **unlisted**. No additional huddle. |
+| ~6:00 PM | **Captain signal**: AI Operator triggers CaptionKit translations ON. |
+| ~7:00 PM | CaptionKit translations OFF; final service ends. **Captain**: manual trigger OFF Resi encoder + Restream (all channels). |
 | Post-service | Post-service huddle, then packdown. CRTVS area last (still uploading). |
 
 ### Other Events
@@ -114,19 +136,19 @@ Same SOP applies with a lean roster. The Captain confirms required roles per eve
 
 #### Captain
 
-The Captain owns the Sunday. They are the last decision-maker for all stream, network, and team issues. They run the 9:00 AM and 3:00 PM huddles, handle all stream toggle actions, and are the escalation point for every role on the team.
+The Captain owns the Sunday. They are the last decision-maker for all stream, network, and team issues. They run the 8:10 AM and 2:10 PM all-in huddles, handle all stream toggle actions, and are the escalation point for every role on the team.
 
 **Duties:**
 - Arrive at 6:00 AM; begin setup oversight
 - Toggle Restream ON at 7:00 AM (Favor Production = unlisted)
 - Send AJA link to STREAM ASSIST TEAM GC by 7:30 AM
-- Attend runsheet huddle at 8:45 AM
-- Run all-in huddle at 9:00 AM
-- Send Favor Production YT link to GC at 9:45 AM; confirm stream visibility
-- Monitor Resi auto-trigger at 9:48–9:50 AM; trigger AJA backup if Resi not live by 9:55 AM
-- Signal AI Operator: Translations ON (~10:30 AM) and OFF (~11:30 AM)
+- Attend AM runsheet huddle at 8:00 AM
+- Run AM all-in huddle at 8:10 AM
+- Confirm each service's pre-stream window and visibility; 11:30 AM is public, all other services unlisted
+- Monitor each Resi auto-trigger / expected-live window; trigger AJA backup at the service-specific contingency time if needed
+- Signal AI Operator for CaptionKit ON/OFF during every service per the timing table in §6
 - Manual trigger OFF: Resi encoder + Restream at service end
-- Solo arrival at 1:30 PM for afternoon service; run full afternoon toggle sequence
+- Attend PM runsheet huddle at 2:00 PM; run PM all-in huddle at 2:10 PM; oversee the 3:00 PM and 5:30 PM service sequences
 - Escalation point for all troubleshooting — final call on any network or stream decision
 
 **Hands off to:** Asst Captain for venue-floor coverage while Captain is at Broadcast Table.
@@ -138,10 +160,10 @@ The Captain owns the Sunday. They are the last decision-maker for all stream, ne
 The Asst Captain is the Captain's eyes and ears across the venue floor. They handle field issues — slow zones, disconnected devices, mesh node problems — so the Captain can stay focused on the stream console.
 
 **Duties:**
-- Arrive at 6:00 AM; assist with mesh node placement and cable route decisions
+- Arrive at 6:15 AM; assist with mesh node placement and cable route decisions
 - Receive and act on speedtest results from the Runner/Speedtester
 - Escalate network issues to Captain with context (location, device, symptom)
-- Cover Captain's floor presence during critical stream windows (9:45–10:05 AM)
+- Cover Captain's floor presence during critical pre-stream / go-live windows
 - Be reachable on GC throughout both services
 
 **Hands off to:** Captain for all stream-critical decisions.
@@ -153,11 +175,11 @@ The Asst Captain is the Captain's eyes and ears across the venue floor. They han
 The Stream Op monitors the live stream quality throughout both services. They watch the Resi encoder, Restream dashboard, and YouTube/iWantTV outputs, and immediately alert the Captain if anything drops or degrades.
 
 **Duties:**
-- Confirm Resi encoder is online and receiving signal before 9:48 AM auto-trigger
+- Confirm Resi encoder is online and receiving signal before each service's auto-trigger
 - Monitor Favor Production YouTube after go-live; watch for buffering or quality alerts
 - Watch Restream dashboard for destination status
 - Alert Captain immediately if any destination drops
-- Monitor AI Translations feed during translation window
+- Monitor CaptionKit translation feed during each translation window
 
 **Hands off to:** Captain for all toggle decisions — Stream Op monitors, Captain acts.
 
@@ -183,8 +205,8 @@ The Troubleshooting volunteer is the technical first-responder for network issue
 The Runner is the team's physical logistics link. They carry cables and gear between areas, run speedtests across the venue, and stay mobile throughout the service.
 
 **Duties:**
-- Arrive at 6:00 AM; assist with cable carries and mesh node transport
-- Run speedtest at every mesh node position before 9:45 AM (minimum ≥80 Mbps on LAN-wired connection; WiFi must be OFF during test)
+- Arrive at 6:15 AM; assist with cable carries and mesh node transport
+- Run speedtest at every mesh node position before the 8:45 AM first-service pre-stream window (minimum ≥80 Mbps on LAN-wired connection; WiFi must be OFF during test)
 - Report all zone results to Asst Captain via GC
 - Remain mobile and available for ad-hoc fetch/carry requests during service
 - Assist with packdown carry duties after service
@@ -202,8 +224,8 @@ The Stream Comms volunteer manages all four communication GCs during the service
   3. **iWantTV Viber** — iWantTV broadcast status
   4. **Kids x Tech x Babies** — Kids Ministry tech coordination
 - At 7:30 AM: Forward AJA Restream link to STREAM ASSIST TEAM GC
-- At 9:45 AM: Send Favor Production YT link to STREAM ASSIST TEAM GC; forward to other GCs as needed
-- At 9:55 AM (if Resi backup triggered): alert all 4 GCs immediately
+- At each service pre-stream window: send / confirm the correct stream link and visibility; the 11:30 AM service is public, all others unlisted
+- At any service contingency time (if Resi backup is triggered): alert all 4 GCs immediately
 - During service: relay stream quality updates; flag any viewer-reported issues to Stream Op
 
 **Hands off to:** Captain for any decisions triggered by GC reports.
@@ -215,10 +237,10 @@ The Stream Comms volunteer manages all four communication GCs during the service
 The Cable Hands volunteer lays all data and power cables across the venue during setup. They ensure every cable run is clean, taped down, and live before the service starts.
 
 **Duties:**
-- Arrive at 6:00 AM
+- Arrive at 6:15 AM
 - Lay and label all Ethernet runs from switch to fixed positions (Broadcast Table, Arena PCs, Resi encoder)
 - Tape down and manage all cable runs in public walking areas (trip hazards = incident)
-- Confirm all wired connections show green link lights before 9:00 AM
+- Confirm all wired connections show green link lights before the 8:10 AM all-in huddle
 - During packdown: collect and coil all cables; store in Box 1 (see [§9 Equipment](#9-equipment))
 
 > **Note:** Cable Hands and CCTV are two separate roles. Do not double-assign.
@@ -230,7 +252,7 @@ The Cable Hands volunteer lays all data and power cables across the venue during
 The CCTV volunteer sets up and monitors the Tapo C200C cameras connected to the FVR CCTV network.
 
 **Duties:**
-- Arrive at 6:00 AM; retrieve CCTV cameras from storage
+- Arrive at 6:15 AM; retrieve CCTV cameras from storage
 - Connect each Tapo C200C to FVR CCTV ([********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0)); confirm feeds in the Tapo app (`net@favor.church` / [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0))
 - Position cameras per the Captain's direction for the venue
 - During packdown: retrieve cameras, confirm offline in Tapo app, store in equipment box
@@ -241,14 +263,15 @@ The CCTV volunteer sets up and monitors the Tapo C200C cameras connected to the 
 
 #### AI Operator
 
-The AI Operator runs SPF.IO live translation, providing real-time translated subtitles during the sermon. The connection requires physical hardware at MC2.
+The AI Operator runs CaptionKit live translation, providing real-time translated subtitles during every Sunday service. The connection uses the physical audio hardware at MC2.
 
 **Duties:**
-- Before service: connect M-Audio USB audio interface at MC2; connect printer cable to SPF.IO input
-- Confirm SPF.IO login: `tech@favor.church` / [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0); confirm audio signal is routing correctly
-- At Captain's signal (~10:30 AM): manually trigger AI Translations ON
-- At Captain's signal (~11:30 AM, before ministry time): manually trigger AI Translations OFF
-- During packdown: disconnect M-Audio and printer cable; store in equipment box
+- Arrive at 6:15 AM
+- Before the first service: connect M-Audio USB audio interface at MC2; connect the USB/printer cable to the CaptionKit input
+- Open [captionkit.io](https://captionkit.io) and sign in as `shared@favor.church`; confirm audio signal is routing correctly
+- At Captain's signal for each service: trigger CaptionKit translations ON/OFF according to the timing table in [§6](#6-stream-toggle-sequence)
+- Keep CaptionKit operational across all four services, including the unlisted services
+- During final packdown: disconnect M-Audio and USB/printer cable; store in equipment box
 
 ---
 
@@ -261,7 +284,7 @@ The AI Operator runs SPF.IO live translation, providing real-time translated sub
 Oversees full packdown. Confirms all streams are OFF before packdown begins. Runs post-service huddle. Signs off on Tetris Master's equipment audit.
 
 **Duties:**
-- Confirm Resi encoder and Restream are both OFF after service ends
+- Confirm Resi encoder and Restream are both OFF after the final service ends
 - Run post-service huddle (5–10 min debrief; shout-outs; issues log)
 - Confirm CRTVS area stays active until upload is complete before giving the all-clear
 - Sign off on Tetris Master's inventory check before anyone leaves
@@ -302,114 +325,122 @@ Packs all equipment into storage boxes and performs the end-of-day inventory aud
 Same volunteer as the setup AI Operator.
 
 **Duties:**
-- Disconnect M-Audio interface and printer cable from MC2
-- Confirm SPF.IO session is closed / logged out
+- Disconnect M-Audio interface and USB/printer cable from MC2
+- Confirm CaptionKit session is closed / logged out
 - Store hardware in the designated equipment box
 
 ---
 
 ## 5. Setup Playbook
 
-### 6:00 AM — Gather
+### 6:00 AM — Captain Call Time
+
+- [ ] Captain arrives and begins setup oversight
+- [ ] Confirm storage / venue access and priority setup path
+- [ ] Confirm stream and network systems are ready for volunteer setup
+
+### 6:15 AM — Volunteer Call Time
 
 - [ ] Full team arrival confirmed via GC
 - [ ] Retrieve all equipment boxes from storage
 - [ ] Begin cable runs: Switch → Broadcast Table, Switch → Arena PCs, Switch → Resi Encoder
 - [ ] Asst Captain assigns mesh node positions per venue layout (see [§10](#10-venue-diagrams))
 - [ ] CCTV: cameras out, connecting to FVR CCTV
-- [ ] AI Operator: M-Audio and printer cable to MC2, SPF.IO login confirmed
+- [ ] AI Operator: M-Audio and USB/printer cable to MC2; CaptionKit login / audio confirmed
 
 ### 7:00 AM — Stream Systems Up
 
-- [ ] **Captain**: toggle Restream ON; Favor Production = unlisted
+- [ ] **Captain**: toggle Restream systems ON; Favor Production = unlisted for rehearsal / early testing
 - [ ] Confirm AJA Helo is receiving signal (green link light; IP visible in ASUS admin panel)
 - [ ] Confirm Resi Encoder is online (`studio.resi.io`)
 - [ ] *Note: Resi TEST stream auto-fires at 7:07 AM — expected, not an error*
 
 ### 7:30 AM — AJA Link Deadline
 
-- [ ] **Captain**: send AJA Restream link to STREAM ASSIST TEAM GC
+- [ ] **Captain**: send AJA rehearsal / preview link to STREAM ASSIST TEAM GC
 - [ ] **Stream Comms**: confirm message sent; forward to other GCs as appropriate
 
-### 8:45 AM — Runsheet Huddle
+### 8:00 AM — Runsheet Huddle
 
 - [ ] Captain attends worship/production runsheet huddle
 - [ ] Asst Captain holds the floor
 
-### 9:00 AM — All-In Huddle
+### 8:10 AM — All-In Huddle
 
 - [ ] Full Internet Team gathers
 - [ ] Captain confirms: stream status, any issues to watch, role reminders
 - [ ] All volunteers confirm ready
 
-### 9:00–9:45 AM — Final Checks
+### 8:10–8:45 AM — Final Checks
 
 - [ ] **Runner/Speedtester**: test every mesh zone (≥80 Mbps on LAN-wired; WiFi OFF during test)
 - [ ] Speedtest results reported to Asst Captain via GC
 - [ ] **Computer checklist**: verify all Deco/X50 units show "Ethernet" (not wireless backhaul)
 - [ ] Confirm Arena PC (Propres) and Arena PC (vMix/Switcher) are on wired connections (WiFi OFF)
 - [ ] Go to [fast.com](https://fast.com) from a wired device; confirm ≥80 Mbps
+- [ ] **AI Operator**: confirm CaptionKit receives clean audio at MC2
 
-### 9:15 AM
+### 8:45 AM — First Pre-Stream Window
 
-- [ ] iWantTV stream live via Oven Media Engine
+- [ ] 9:00 AM service stream begins **unlisted**
+- [ ] **Captain / Stream Op**: follow the 8:48 / 8:50 / 8:55 Resi sequence in [§6](#6-stream-toggle-sequence)
+- [ ] Keep Internet Team and CaptionKit operational through the 9:00 AM service and morning rehearsal / testing
 
-### 9:45 AM — Pre-Service Final
+### 11:15 AM — Public Livestream Window
 
-- [ ] **Captain**: send Favor Production YT link to STREAM ASSIST TEAM GC
-- [ ] Stream visibility confirmed: Favor Production = unlisted · Favor Church Manila = unlisted backup · iWantTV = public · Facebook = OFF
-- [ ] **Stream Comms**: forward to Tech x Socials and Kids x Tech x Babies GCs
+- [ ] Switch the 11:30 AM service to **PUBLIC**
+- [ ] Send / confirm the public Favor Production stream link
+- [ ] **Captain / Stream Op**: follow the 11:18 / 11:20 / 11:25 Resi sequence
+- [ ] After the 11:30 AM service ends (~1:00 PM), return service-stream visibility to **unlisted**
 
-### 9:48 AM
+### 2:00 PM / 2:10 PM — PM Huddles
 
-- [ ] Resi LIVE auto-trigger fires
-- [ ] **Stream Op**: confirm Resi stream visible in `studio.resi.io`
+- [ ] Captain attends PM runsheet huddle at 2:00 PM
+- [ ] Full PM all-in huddle at 2:10 PM
+- [ ] No additional huddle before the 5:30 PM service
 
-### 9:50 AM
+### Afternoon / Evening Services
 
-- [ ] Resi should be live (accounting for 2–5 min buffer delay)
-- [ ] **Stream Op**: confirm YouTube Production shows live stream
-
-### 9:55 AM — Contingency Window
-
-- [ ] **IF Resi NOT live**: Captain triggers AJA Backup Streams immediately
-- [ ] **Stream Comms**: alert all 4 GCs
-
-### 10:00 AM — Service Starts
-
-- [ ] All positions held; Stream Op monitoring; Troubleshooting on standby
+- [ ] 3:00 PM service: unlisted; pre-stream at 2:45 PM
+- [ ] 5:30 PM service: unlisted; pre-stream at 5:15 PM
+- [ ] Follow the service-specific Resi and CaptionKit timing table in [§6](#6-stream-toggle-sequence)
 
 ---
 
 ## 6. Stream Toggle Sequence
 
-### Timing Table
-
-See full schedule in [§3](#3-schedule). Key toggle moments:
+### Fixed Early-Morning Systems
 
 | Time | Action | Who |
 |---|---|---|
-| 7:00 AM | Restream ON · Favor Production unlisted | Captain |
-| 7:30 AM | Send AJA link to STREAM ASSIST TEAM GC | Captain / Stream Comms |
-| 9:15 AM | iWantTV live | Oven Media Engine (auto) |
-| 9:45 AM | Send Favor Production YT link to GC | Captain |
-| 9:48 AM | Resi auto-trigger (LIVE) | Resi (auto) |
-| 9:55 AM | AJA Backup if Resi not live | Captain |
-| ~10:30 AM | AI Translations ON | AI Operator (Captain signal) |
-| ~11:30 AM | AI Translations OFF | AI Operator (Captain signal) |
-| ~12:00 NN | Resi OFF + Restream OFF | Captain |
+| 7:00 AM | Restream systems ON · Favor Production unlisted for rehearsal / testing | Captain |
+| 7:07 AM | Resi TEST stream auto-trigger | Resi (auto) |
+| 7:30 AM | Send AJA rehearsal / preview link to STREAM ASSIST TEAM GC | Captain / Stream Comms |
+
+### Per-Service Timing
+
+The stream cadence is the same for every service: **pre-stream 15 minutes before service**, **Resi trigger 12 minutes before**, **expected live 10 minutes before**, and **AJA contingency 5 minutes before**.
+
+| Service | Visibility | Pre-stream | Resi trigger | Expected live | AJA contingency | CaptionKit ON | CaptionKit OFF / service end |
+|---|---|---|---|---|---|---|---|
+| **9:00 AM** | Unlisted | 8:45 AM | 8:48 AM | 8:50 AM | 8:55 AM | ~9:30 AM | ~10:30 AM |
+| **11:30 AM** | **PUBLIC** | 11:15 AM | 11:18 AM | 11:20 AM | 11:25 AM | ~12:00 NN | ~1:00 PM |
+| **3:00 PM** | Unlisted | 2:45 PM | 2:48 PM | 2:50 PM | 2:55 PM | ~3:30 PM | ~4:30 PM |
+| **5:30 PM** | Unlisted | 5:15 PM | 5:18 PM | 5:20 PM | 5:25 PM | ~6:00 PM | ~7:00 PM |
+
+> The **11:30 AM service is the only public livestream**. Keep the 9:00 AM, 3:00 PM, and 5:30 PM service streams unlisted.
 
 ### Stream Destinations Matrix
 
 | Destination | Path | Visibility | Default State | Notes |
 |---|---|---|---|---|
 | YT-Prod TEST | Resi → studio.resi.io | — | AUTO 7:07 AM | 1-hr test stream, 2–5 min delay |
-| Favor Production YouTube | Resi → studio.resi.io | **Unlisted** | AUTO 9:48 AM | Main live stream; 2–5 min buffer |
+| Favor Production YouTube | Resi → studio.resi.io | Unlisted except **11:30 AM PUBLIC** | Per-service auto-trigger | Main Resi stream; 2–5 min buffer |
 | Facebook | Resi → studio.resi.io | — | **OFF — Sundays** | In Resi config; Captain enables only if needed |
-| Favor Church Manila YouTube | AJA → Restream | **Unlisted** | ON 9:45 AM | YT-Backup; 30 s stream |
-| Favor Production YouTube | AJA → Restream | — | ON 7:30 AM / 9:45 AM | YT-Prod realtime; used for rehearsals/preview |
-| iWantTV | AJA → Restream → Oven Media Engine | **Public** | ON 9:20 AM | 4 s test trigger; then live |
-| Facebook | AJA → Restream | — | **OFF — Sundays** | Backup only; Captain triggers if Resi down |
+| Favor Church Manila YouTube | AJA → Restream | **Unlisted backup** | Contingency only | AJA backup when Resi misses the service-specific go-live window |
+| Favor Production YouTube | AJA → Restream | Unlisted / backup | Systems ON from 7:00 AM | Rehearsals, preview, and realtime backup |
+| iWantTV | AJA → Restream → Oven Media Engine | **Public for 11:30 AM service** | Prep from 10:45 AM | Public broadcast destination |
+| Facebook | AJA → Restream | — | **OFF — Sundays** | Backup only; Captain triggers if Resi is down |
 
 ### Resi Stream Metadata (YouTube / Facebook)
 
@@ -420,70 +451,62 @@ Use the following when creating or updating the YouTube / Facebook stream destin
 | **Title** | `Join us LIVE now at Favor Church!` |
 | **Description** | See block below |
 
-**Description (copy-paste):**
-
 ```
-If you have any prayer requests, want to submit a testimony or want to know what your next step is after praying the salvation prayer, head to our website through the link in our bio!
+Favor Church Manila — Sunday Service
+Join us live from Crowne Plaza Manila Galleria.
 
-__
-
-📱CONNECT WITH US:
-Instagram: @favor.mnl
-Threads: @favor.mnl
-Twitter/X: @favor_mnl
-
-__
-#favorchurch
-#churchforimperfectpeople
-#thefamilyyouvebeenlookingfor
+Service times: 9:00 AM · 11:30 AM · 3:00 PM · 5:30 PM
+Public livestream: 11:30 AM
 ```
 
-### Stream Diagram
-
-![Stream diagram](Internet%20Schematic/diagrams/stream-diagram.svg)
-
-**ASCII version:**
+### Signal / Platform Flow
 
 ```
-Broadcast Switcher (vMix / Tricaster)
+Production video/audio
  │
  ├──► Resi Encoder (DHCP)  ←── [PLDT RESI — dedicated connection]
  │     → studio.resi.io  |  2–5 min buffer
- │     ├──► YT-Prod [TEST]              AUTO 7:07 AM  (1 hr)
- │     ├──► Favor Production YouTube    [UNLISTED · MAIN]  AUTO 9:48 AM  (live ~9:53 AM)
- │     └──► Facebook                   [OFF — Sundays]    AUTO 9:48 AM  (in config; disabled)
+ │     ├──► YT-Prod [TEST]              AUTO 7:07 AM
+ │     └──► Favor Production YouTube    Per-service triggers
+ │           9:00 AM   [UNLISTED]
+ │           11:30 AM  [PUBLIC · MAIN LIVESTREAM]
+ │           3:00 PM   [UNLISTED]
+ │           5:30 PM   [UNLISTED]
  │
  └──► AJA Helo (10.6.33.5 · FVR MAIN)
        → app.restream.io  |  Realtime (<30 s)
-       ON: 7:00 AM
-       ├──► Favor Church Manila YouTube [UNLISTED · Backup]  9:45 AM  (30 s)
-       ├──► Favor Production YouTube    [REHEARSALS/Preview] 7:30 AM / 9:45 AM  (realtime)
-       ├──► iWantTV                     [PUBLIC]             9:20 AM  (4 s test → live)
-       └──► Facebook                   [OFF — Sundays]      Backup only
+       Systems ON: 7:00 AM
+       ├──► Favor Production YouTube    [REHEARSAL / BACKUP]
+       ├──► Favor Church Manila YouTube [UNLISTED BACKUP]
+       ├──► iWantTV                     [PUBLIC · 11:30 AM SERVICE]
+       └──► Facebook                    [OFF — Sundays]
 
-AI Translations (SPF.IO) at MC2
-  Audio Board → M-Audio → SPF.IO (AI Operator manually triggers)
-  ON:  ~10:30 AM  (Captain signal)
-  OFF: ~11:30 AM  (Captain signal, before ministry time)
+CaptionKit at MC2
+  Audio Board → M-Audio → CaptionKit (AI Operator manually triggers)
+  9:00 AM service:   ON ~9:30 AM  / OFF ~10:30 AM
+  11:30 AM service: ON ~12:00 NN / OFF ~1:00 PM
+  3:00 PM service:  ON ~3:30 PM  / OFF ~4:30 PM
+  5:30 PM service:  ON ~6:00 PM  / OFF ~7:00 PM
 ```
 
-### Afternoon Service (4 PM)
+### Afternoon / Evening Operations
 
-- Captain solo at 1:30 PM: toggle Favor Production unlisted ON, send link to GC, speedtest all areas
-- 4:00 PM: resend stream link to STREAM ASSIST TEAM GC during pre-roll
-- AI Translations: ON ~4:30 PM / OFF ~5:30 PM
-- Service ends ~6:00 PM: Captain triggers Resi OFF + Restream OFF
+- PM runsheet huddle: **2:00 PM**
+- PM all-in huddle: **2:10 PM**
+- No second PM huddle before the 5:30 PM service
+- 3:00 PM and 5:30 PM streams remain unlisted
+- After the final service (~7:00 PM), Captain manually turns OFF Resi + Restream
 
 ---
 
 ## 7. Packdown Playbook
 
-### Post-Service (~6:00 PM)
+### Post-Service (~7:00 PM)
 
 **Step 1 — Captain confirms streams OFF**
 - Resi encoder: manual trigger OFF in `studio.resi.io`
 - Restream: toggle OFF all channels in `app.restream.io`
-- AI Translations: SPF.IO closed (should already be OFF from ~5:30 PM signal)
+- AI Translations: CaptionKit closed after the final-service OFF signal
 
 **Step 2 — Post-service huddle** (5–10 min)
 - Brief debrief: what went well, what broke, shout-outs
@@ -508,7 +531,7 @@ AI Translations (SPF.IO) at MC2
 
 **Step 7 — AI Operator packdown**
 - Disconnect M-Audio and printer cable from MC2
-- Confirm SPF.IO session closed
+- Confirm CaptionKit session closed
 
 **Step 8 — Tetris Master: final inventory**
 - Pack all remaining gear into boxes (see §9)
@@ -546,7 +569,7 @@ When in doubt: restart the device, wait 60 seconds, re-test. Most issues are phy
 
 ### Playbook B — Resi / AJA Not Streaming
 
-**Symptoms:** YouTube Production not live after 9:50 AM; Resi dashboard shows no signal.
+**Symptoms:** The active service stream is not live by its expected-live time; Resi dashboard shows no signal.
 
 **Check Resi Encoder:**
 1. Access `studio.resi.io` (`tech@favor.church` / [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0))
@@ -555,8 +578,8 @@ When in doubt: restart the device, wait 60 seconds, re-test. Most issues are phy
 4. If unreachable: check Ethernet cable from PLDT RESI router to encoder; confirm the cable is seated and the router's LAN port has a green link light
 6. Power cycle Resi encoder; wait 90 s; re-check
 
-**If Resi cannot recover within 5 min:**
-7. Captain triggers AJA Backup Streams in Restream dashboard
+**If Resi cannot recover by the service-specific AJA contingency time:**
+7. Captain triggers AJA Backup Streams in Restream dashboard for the active service
 8. Stream Comms notifies all 4 GCs immediately
 
 **Check AJA Helo:**
@@ -632,8 +655,8 @@ When in doubt: restart the device, wait 60 seconds, re-test. Most issues are phy
 
 | Item | Qty | Notes |
 |---|---|---|
-| M-Audio USB audio interface | 1 | MC2; SPF.IO audio input |
-| USB printer cable | 1 | SPF.IO audio connection |
+| M-Audio USB audio interface | 1 | MC2; CaptionKit audio input |
+| USB printer cable | 1 | CaptionKit audio connection |
 
 ### Tools / Misc
 
@@ -730,7 +753,7 @@ Deprecated floor plans are in [`Internet Schematic/floor-plans/archive/`](Intern
 
 ## 11. Credentials
 
-> **Active as of 2026-05-24.** Passwords rotate periodically. When a rotation happens, the Captain shares updated credentials with relevant staff and volunteers. Update this file and add a line to the version history when you receive a rotation notice.
+> **Active as of 2026-10-04.** Passwords rotate periodically. When a rotation happens, the Captain shares updated credentials with relevant staff and volunteers. Update this file and add a line to the version history when you receive a rotation notice.
 
 ### WiFi SSIDs
 
@@ -765,7 +788,7 @@ Deprecated floor plans are in [`Internet Schematic/floor-plans/archive/`](Intern
 |---|---|---|---|
 | TP-Link Deco / Tapo | `net@favor.church` | [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0) | Tapo C200C = CCTV cameras |
 | Starlink | `net@favor.church` | [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0) | 2FA → tech@favor.church → Rico |
-| SPF.IO | `tech@favor.church` | [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0) | AI Operator login |
+| CaptionKit | `shared@favor.church` | [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0) | [captionkit.io](https://captionkit.io) · AI Operator login |
 | Restream | `socialmedia@favor.church` | [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0) | AJA Helo destination |
 | Resi | `tech@favor.church` | [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0) | Resi Encoder · studio.resi.io |
 | YouTube (main) | `favorchurchsocmed@gmail.com` | [********](https://docs.google.com/spreadsheets/d/1tNCQqS9vz9uSEQTAPdAlrHpOCR1E-s07DiRClT66s3o/edit?gid=0#gid=0) | 2FA: Marketing, Tali, Em, Mica, Rico |
@@ -788,7 +811,7 @@ Passwords rotate periodically. The **Captain** is responsible for sharing update
 | **Resi** | Church streaming platform (formerly Subsplash). The hardware Resi Encoder encodes the live feed and sends it to `studio.resi.io` for distribution to YouTube. |
 | **AJA Helo** | Hardware streaming encoder from AJA. Sends a realtime stream (<30 s delay) to Restream via FVR MAIN. |
 | **Restream** | `app.restream.io` — multi-destination streaming platform. Receives AJA's stream and distributes simultaneously to YouTube, Facebook, iWantTV. |
-| **SPF.IO** | AI-powered live translation tool. Runs at MC2 via M-Audio interface. Provides real-time translated subtitles for the sermon. |
+| **CaptionKit** | AI-powered live translation / captioning platform used by the AI Operator at MC2. Audio routes through the M-Audio interface; access via [captionkit.io](https://captionkit.io). |
 | **X50 / Mesh** | TP-Link Deco X50 WiFi 6 mesh nodes. Extend FVR MAIN wireless coverage across the venue. Best on wired Ethernet backhaul. |
 | **ASUS ROG Rapture** | ASUS ROG Rapture GT-BE98 — main WiFi 7 router. Hosts FVR MAIN and FVR CCTV. IP: 10.3.66.1. Accepts WAN 1 (Starlink) and WAN 2 (PLDT JIREH). |
 | **PLDT JIREH** | PLDT 5G H153 router; WAN 2 input into the ASUS Rapture. SIM 09645628645. |
@@ -810,6 +833,7 @@ Passwords rotate periodically. The **Captain** is responsible for sharing update
 | Version | Date | Changes |
 |---|---|---|
 | v1.0 | 2026-05-24 | Initial creation. Full migration from Google Slides + Sheets. All credentials reconciled. 9 SETUP + 6 PACKDOWN roles documented. Topology corrected: JIREH = WAN 2 into ASUS; RESI = direct to Resi Encoder. |
+| v1.1 | 2026-10-04 | Updated Crowne Sunday service cadence, captain/volunteer call times, AM/PM huddles, per-service streaming windows, and live translation workflow to CaptionKit. |
 
 ---
 
